@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>MAVANA - Sport, Nature & Communauté à Manambato-Vavony, Madagascar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="MAVANA, Association Manambato Vavony Nature, Madagascar, Manambato, Vavony, sport, VTT, kayak, natation, éducation, environnement, reboisement, tourisme écologique, énergie renouvelable, lutte pauvreté" name="keywords">
+    <meta content="L'Association MAVANA agit pour la préservation de la nature, le développement communautaire par le sport (VTT, kayak, natation) et l'éducation dans la région de Manambato et Vavony à Madagascar." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Optionnel: pour un défilement fluide si pas déjà géré par le template */
+        html { scroll-behavior: smooth; }
+        /* Petites aides visuelles non-invasives */
+        .iban-box{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+        .iban-text{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#f8f9fa; padding:.5rem .75rem; border-radius:.5rem}
+        .qr-box{width:164px; height:164px; border-radius:.5rem; background:#f1f3f5; display:grid; place-items:center}
+        .pill{display:inline-block; padding:.25rem .5rem; border-radius:999px; background:#f1f3f5; font-size:.875rem}
+    </style>
+</head>
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+			<div class="col-lg-6 px-5 text-start">
+				<small><i class="fa fa-map-marker-alt me-2"></i>Intervention : Manambato-Vavony, Madagascar (Siège : Sainte-Marie, La Réunion)</small>
+				<small class="ms-4"><i class="fa fa-phone me-2"></i>+262 693 10 58 36</small>
+			</div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Plus d'infos sur l'association :</small>
+                <a class="text-white-50 ms-3" href="https://facebook.com/associationmavana" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://twitter.com/asso_mavana" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.linkedin.com/company/mavana" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/association_mavana" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <img src="img/logo-mavana.png" alt="Logo Association MAVANA" style="height: 50px;">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                    <a href="#section-apropos" class="nav-item nav-link">À propos</a>
+                    <a href="#section-event" class="nav-item nav-link">Nos actions</a>
+                    <a href="#section-don" class="nav-item nav-link">Donner</a>
+                    <a href="#section-contact" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-primary py-2 px-3" href="login.php">
+                        Espace Adhérent
+                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+	<!-- Event Start -->
+	<div id="section-event" class="mb-5"> 
+		<div class="container-xxl py-5"> 
+			<div class="container py-5">
+				<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+					<div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Événement à Venir</div>
+				</div>
+
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-10 col-xl-9 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="event-item bg-white p-4 p-lg-5 rounded shadow-sm text-center">
+                        <img src="img/flyer-raid-mavana-2025-medium.png" class="img-fluid rounded mb-4" alt="Flyer du Raid Solidaire MAVANA 2025 : Programme détaillé">
+                        <h5 class="text-primary mb-2">Participez & Soutenez !</h5>
+                        <p class="mb-4">Votre participation est une contribution directe à nos actions. Ensemble, soutenons l'avenir scolaire des enfants du village des pêcheurs.</p>
+						<a class="btn btn-primary py-2 px-4" href="https://forms.gle/TrcLHhSPCsc3kjcB9" target="_blank" rel="noopener noreferrer">
+							Je m'inscris
+							<div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+								<i class="fa fa-arrow-right"></i>
+							</div>
+						</a>
+                        <p class="mt-3 mb-0"><small>Contactez-nous : <a href="mailto:contact@association-mavana.org" class="text-primary">contact@association-mavana.org</a></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Event End -->
+
+
+    <!-- Donate Start (CTA) -->
+    <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+        <div class="container py-5" id="section-don">
+            <div class="row g-5 align-items-start">
+                <!-- Col gauche (texte) -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Soutenir MAVANA</div>
+                    <h1 class="display-6 text-white mb-4">Votre Don Transforme des Vies à Manambato-Vavony !</h1>
+                    <p class="text-white-50">Chaque contribution finance directement nos actions de sport, d'éducation et de protection de l'environnement.</p>
+                    <p class="text-white-50 mb-4">Contribuable français ? Votre don est déductible des impôts à hauteur de <strong>66 %</strong> (art. 200 CGI). Un reçu vous est adressé.</p>
+
+                </div>
+
+                <!-- Col droite (carte avec onglets virement/carte) -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-virement-tab" data-bs-toggle="pill" data-bs-target="#pills-virement" type="button" role="tab" aria-controls="pills-virement" aria-selected="true"><i class="bi bi-bank me-1"></i> Virement SEPA</button>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <!-- Onglet VIREMENT -->
+                                <div class="tab-pane fade show active" id="pills-virement" role="tabpanel" aria-labelledby="pills-virement-tab">
+                                    <div class="row g-3 align-items-start">
+                                        <div class="col-md-7">
+                                            <div class="mb-2"><small class="text-muted">Bénéficiaire</small><div id="benefName">Association MAVANA</div></div>
+                                            <div class="mb-2"><small class="text-muted">Banque</small><div id="bankName">BNP Paribas</div></div>
+                                            <div class="mb-2"><small class="text-muted">BIC</small><div class="iban-text" id="bic">BNPARERXXXX</div></div>
+                                            <div class="mb-2"><small class="text-muted">IBAN</small>
+                                                <div class="iban-box">
+                                                    <span class="iban-text" id="iban">FR76 4191 9094 2230 0000 1152 814</span>
+                                                    <button class="btn btn-outline-primary btn-sm" id="copyIban" type="button"><i class="bi bi-clipboard"></i> Copier</button>
+                                                    <span class="text-success fw-semibold d-none" id="copyDone">Copié&nbsp;!</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                                <a class="btn btn-light btn-sm" id="ribLink" href="/docs/RIB-MAVANA.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> RIB (PDF)</a>
+                                               
+                                            </div>
+                                            <div class="mt-3">
+                                                <small class="text-muted">Référence à indiquer :</small>
+                                                <span class="pill" id="ref">DON + Nom + Email</span>
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+
+                                    <hr class="my-4">
+                                    <h6>J’ai effectué un virement</h6>
+                                    <form id="notifyForm" class="row g-2">
+                                        <div class="col-md-6">
+                                            <label for="fNameDon" class="form-label">Nom et prénom</label>
+                                            <input id="fNameDon" name="name" class="form-control form-control-sm" autocomplete="name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="fEmailDon" class="form-label">Email</label>
+                                            <input id="fEmailDon" name="email" type="email" class="form-control form-control-sm" autocomplete="email" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="fAmountDon" class="form-label">Montant (€)</label>
+                                            <input id="fAmountDon" name="amount" type="number" inputmode="decimal" step="0.01" min="0" class="form-control form-control-sm" required>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label for="fRefDon" class="form-label">Référence du virement</label>
+                                            <input id="fRefDon" name="reference" class="form-control form-control-sm" placeholder="DON Nom Email">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="consent" required>
+                                                <label class="form-check-label text-muted" for="consent">J’accepte que mes données soient utilisées pour l’émission du reçu.</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex gap-2">
+                                            <button class="btn btn-primary" type="submit">Notifier l’association</button>
+                                            <button type="button" class="btn btn-outline-primary" id="mailtoBtn"><i class="bi bi-envelope"></i> Envoyer par e‑mail</button>
+                                        </div>
+                                        <div class="col-12">
+                                            <small class="text-muted">Contact dons : <a href="mailto:dons@association-mavana.org" class="text-decoration-underline" id="donEmailLink">dons@association-mavana.org</a></small>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Donate End -->
+	
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.png" alt="Paysage de Manambato Vavony avec enfants faisant du sport">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Manambato Vavony Nature</h1>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Ensemble, soutenons l'avenir scolaire des enfants du village des pêcheurs.</p>
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="#section-apropos"> 
+                                        En savoir plus
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/velo-3.png" alt="Actions de reboisement et tourisme écologique à Madagascar">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 pt-5">
+                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Agir pour un Futur Durable par le Sport et la Nature</h1>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Participez à nos actions alliant pratiques sportives et engagement écologique à Manambato-Vavony.</p>
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="https://forms.gle/TrcLHhSPCsc3kjcB9" target="_blank">
+                                        Participez à notre prochain évènement sportif
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+  
+    <!-- About Start -->
+    <div class="container-xxl py-5" id="section-apropos"> 
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
+                        <img class="position-absolute w-100 h-100 pt-5 pe-5" src="img/course-v3-1.png" alt="Projet sportif et éducatif MAVANA à Madagascar" style="object-fit: cover;">
+                        <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="img/velo-kayak.jpg" alt="Bénévoles MAVANA en action à Manambato" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Qui sommes‑nous ?</div>
+                        <h1 class="display-6 mb-5">MAVANA : Un Engagement Concret pour Manambato et Vavony</h1>
+                        <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
+                            <p class="text-dark mb-2">L'Association Manambato Vavony Nature (MAVANA) est une organisation loi 1901 dédiée à la lutte contre la pauvreté, la préservation de l'environnement et le développement communautaire par le sport dans la région de Manambato-Vavony à Madagascar.</p>
+                            <span class="text-primary">L'équipe MAVANA</span>
+                        </div>
+                        <p class="mb-5">Nous mettons en œuvre des projets d'initiation et de pratique sportive (VTT, kayak, natation), d'éducation environnementale pour les enfants, de reboisement, de promotion du tourisme écologique et d'aide au développement de projets locaux, avec une attention particulière pour les jeunes défavorisés.</p>
+                        <a class="btn btn-primary py-2 px-3 me-3" href="#section-event">
+                            Découvrir nos actions
+                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        <a class="btn btn-outline-primary py-2 px-3" href="mailto:contact@association-mavana.org">
+                            Nous contacter
+                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start (Nos Engagements) -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Nos engagements</div>
+                <h1 class="display-6 mb-5">Comment MAVANA Fait la Différence sur le Terrain</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Engagement 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="icon-container mb-4"> 
+                            <i class="bi bi-bicycle text-primary display-4"></i>
+                        </div>
+                        <h4 class="mb-3">Sport pour le Développement</h4>
+                        <p class="mb-4">Utiliser le VTT, le kayak et la natation comme outils d'éducation, de développement personnel, d'entraide et de sensibilisation à la nature.</p>
+                    </div>
+                </div>
+                <!-- Engagement 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="icon-container mb-4">
+                            <i class="bi bi-people-fill text-primary display-4"></i>
+                        </div>
+                        <h4 class="mb-3">Autonomisation Locale</h4>
+                        <p class="mb-4">Lutter contre la pauvreté en soutenant les initiatives des habitants, en offrant des formations et en favorisant l'implication communautaire.</p>
+                    </div>
+                </div>
+                <!-- Engagement 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="icon-container mb-4">
+                            <i class="bi bi-tree-fill text-primary display-4"></i>
+                        </div>
+                        <h4 class="mb-3">Environnement Durable</h4>
+                        <p class="mb-4">Protéger la biodiversité par le reboisement, la promotion du tourisme écologique et le développement de projets d'énergies renouvelables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+	<!-- Contact Start -->
+	<div class="container-xxl py-5" id="section-contact">
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+					<div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Contact</div>
+					<h1 class="display-6 mb-5">Si vous avez une question, n'hésitez pas à nous contacter</h1>
+
+					<form>
+						<div class="row g-3">
+							<div class="col-md-6">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="name" placeholder="Votre nom">
+									<label for="name">Votre nom</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-floating">
+									<input type="email" class="form-control" id="email" placeholder="Votre email">
+									<label for="email">Votre email</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="subject" placeholder="Sujet">
+									<label for="subject">Sujet</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Laissez un message ici" id="message" style="height: 100px"></textarea>
+									<label for="message">Message</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<button class="btn btn-primary py-2 px-3 me-3">
+									Envoyer le message
+									<div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+										<i class="fa fa-arrow-right"></i>
+									</div>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+					<div class="position-relative rounded overflow-hidden h-100">
+						<iframe class="position-relative w-100 h-100"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60448.954301557074!2d49.09769340667268!3d-18.75087271351404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f3899426d55925%3A0xaec5620dec705361!2sManambato%2C%20Madagascar!5e0!3m2!1sfr!2sfr!4v1749715233935!5m2!1sfr!2sfr"
+						frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+						tabindex="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold text-primary mb-4">ASSOCIATION <span class="text-white">MAVANA</span></h1>
+                    <p>Agir pour un avenir durable à Manambato-Vavony, Madagascar, par le sport, l'éducation et la préservation de la nature.</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://twitter.com/asso_mavana" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://facebook.com/associationmavana" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://youtube.com/@associationmavana" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.linkedin.com/company/mavana" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Coordonnées</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Siège : 48 bis rue MANES, 97438 Sainte-Marie, La Réunion (France)</p>
+                    <p><i class="fa fa-flag me-3"></i>Zone d'intervention : Manambato-Vavony, Madagascar</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+262 693 10 58 36</p>
+                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:contact@association-mavana.org">contact@association-mavana.org</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Accès rapide</h5>
+                    <a class="btn btn-link" href="#section-apropos">Qui sommes‑nous</a>
+                    <a class="btn btn-link" href="#section-event">Nos actions</a>
+                    <a class="btn btn-link" href="#section-don">Donner</a>
+                    <a class="btn btn-link" href="#section-contact">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        © <span id="year"></span> Association MAVANA (Manambato Vavony Nature) – Tous droits réservés.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- QRCode generator (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-M6td14qU6l6d1uK1QnE1m8W3s6c5r8cB6qJ2Rz0p2K0T8s8Gm3k4aA1V2w3Xg0F0qvKxJY1ZrY8x0jvTn6W9tA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // Mise à jour automatique de l'année dans le footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // === RENSEIGNER ICI VOS DONNÉES ===
+        const DON_DATA = {
+          beneficiary: 'Association MAVANA',
+          bank: 'BNP Paribas Reunion Sainte Marie',
+          iban: 'FR76 4191 9094 2230 0000 1152 814', // espaces acceptés à l'affichage
+          bic: 'BNPARERXXXX',
+          reference: 'DON + Nom + Email',
+          ribPdfUrl: '/docs/RIB-MAVANA.pdf',
+          notifyEmail: 'contact@association-mavana.org',
+        };
+
+        // Hydrate les champs
+        const $ = (id)=>document.getElementById(id);
+        if($('benefName')) $('benefName').textContent = DON_DATA.beneficiary;
+        if($('bankName')) $('bankName').textContent = DON_DATA.bank;
+        if($('iban')) $('iban').textContent = DON_DATA.iban;
+        if($('bic')) $('bic').textContent = DON_DATA.bic;
+        if($('ref')) $('ref').textContent = DON_DATA.reference;
+        if($('ribLink')) $('ribLink').href = DON_DATA.ribPdfUrl;
+        if($('donEmailLink')) $('donEmailLink').setAttribute('href', 'mailto:'+DON_DATA.notifyEmail);
+        if($('donEmailLink')) $('donEmailLink').textContent = DON_DATA.notifyEmail;
+
+        // Copier l'IBAN
+        const copyBtn = $('copyIban');
+        const copied = $('copyDone');
+        if(copyBtn){
+          copyBtn.addEventListener('click', async () => {
+            const text = DON_DATA.iban.replace(/\s+/g,'');
+            try{
+              await navigator.clipboard.writeText(text);
+              copied?.classList.remove('d-none');
+              setTimeout(()=>copied?.classList.add('d-none'), 1500);
+            }catch(e){
+              const ta = document.createElement('textarea');
+              ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+              copied?.classList.remove('d-none');
+              setTimeout(()=>copied?.classList.add('d-none'), 1500);
+            }
+          });
+        }
+
+        // EPC QR (SEPA)
+        function buildEpc({beneficiary, iban, bic, amountEUR, remittance}){
+          const cleanIban = (iban||'').replace(/\s+/g,'').toUpperCase();
+          const cleanBic = (bic||'').toUpperCase();
+          const name = (beneficiary||'').substring(0,70);
+          const amt = amountEUR && Number(amountEUR) > 0 ? `EUR${Number(amountEUR).toFixed(2)}` : '';
+          const rem = (remittance||'').substring(0,140);
+          return ['BCD','001','1','SCT',cleanBic,name,cleanIban,amt,'',rem].join('\n');
+        }
+
+        const qrNode = $('qr');
+        function renderQR(){
+          if(!qrNode) return;
+          const epc = buildEpc({
+            beneficiary: DON_DATA.beneficiary,
+            iban: DON_DATA.iban,
+            bic: DON_DATA.bic,
+            amountEUR: $('amount')?.value,
+            remittance: DON_DATA.reference
+          });
+          qrNode.innerHTML = '';
+          new QRCode(qrNode, {text: epc, width: 160, height: 160, correctLevel: QRCode.CorrectLevel.M});
+        }
+        renderQR();
+        if($('amount')) $('amount').addEventListener('input', renderQR);
+
+        // Télécharger la référence EPC en .txt
+        if($('downloadEpcTxt')) $('downloadEpcTxt').addEventListener('click', () => {
+          const epc = buildEpc({
+            beneficiary: DON_DATA.beneficiary,
+            iban: DON_DATA.iban,
+            bic: DON_DATA.bic,
+            amountEUR: $('amount')?.value,
+            remittance: DON_DATA.reference
+          });
+          const blob = new Blob([epc], {type:'text/plain;charset=utf-8'});
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url; a.download = 'SEPA-QR-EPC.txt'; a.click();
+          URL.revokeObjectURL(url);
+        });
+
+        // Formulaire : mailto fallback
+        if($('mailtoBtn')) $('mailtoBtn').addEventListener('click', () => {
+          const name = $('fNameDon')?.value?.trim() || '';
+          const email = $('fEmailDon')?.value?.trim() || '';
+          const amount = $('fAmountDon')?.value?.trim() || '';
+          const ref = $('fRefDon')?.value?.trim() || DON_DATA.reference;
+          const subject = encodeURIComponent('Notification de don par virement');
+          const body = encodeURIComponent(`Bonjour,\n\nJe vous confirme mon don par virement :\n- Nom : ${name}\n- Email : ${email}\n- Montant : ${amount} EUR\n- Référence : ${ref}\n\nMerci,\n${name}`);
+          window.location.href = `mailto:${DON_DATA.notifyEmail}?subject=${subject}&body=${body}`;
+        });
+
+        // Formulaire : simple validation (à remplacer par un POST si vous avez un backend)
+        if($('notifyForm')) $('notifyForm').addEventListener('submit', (e) => {
+          e.preventDefault();
+          if(!$('consent')?.checked){
+            alert('Merci de cocher la case de consentement.');
+            return;
+          }
+          const fd = new FormData(e.currentTarget);
+          const payload = Object.fromEntries(fd.entries());
+          console.log('Notification don (à envoyer à votre backend)', payload);
+          alert('Merci ! Votre notification a bien été prise en compte.');
+          e.currentTarget.reset();
+        });
+    </script>
+</body>
+</html>
