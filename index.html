@@ -205,6 +205,9 @@
                     <h1 class="display-6 text-white mb-4">Votre Don Transforme des Vies à Manambato-Vavony !</h1>
                     <p class="text-white-50">Chaque contribution finance directement nos actions de sport, d'éducation et de protection de l'environnement.</p>
                     <p class="text-white-50 mb-4">Contribuable français ? Votre don est déductible des impôts à hauteur de <strong>66 %</strong> (art. 200 CGI). Un reçu vous est adressé.</p>
+                    <button class="btn btn-primary py-2 px-4" type="button" id="openHaOverlay">
+                        <i class="bi bi-heart-fill me-2"></i>Faire un don en ligne
+                    </button>
 
                 </div>
 
@@ -529,6 +532,20 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <div id="haWidgetModal" style="position: fixed; inset: 0; display: none; align-items: center; justify-content: center; backdrop-filter: blur(15px) brightness(0.5); z-index: 2147483647;">
+        <button id="closeHaWidgetBtn" type="button" aria-label="Fermer le formulaire de don" style="position: absolute; top: .5rem; right: 1.5rem; z-index: 2147483648; background: #EFEFF4; border: none; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="modal-content" style="position: relative; width: 100%; max-width: 950px; height: 100%; overflow: hidden;">
+            <iframe
+                id="haWidget"
+                title="Formulaire de don HelloAsso MAVANA"
+                src="https://www.helloasso.com/associations/manambato-vavony-nature/formulaires/1/widget?view=overlay"
+                style="width: 100%; height: 100%; border: none; border-radius: 8px;"
+            ></iframe>
+        </div>
+    </div>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -680,6 +697,36 @@
               if (error?.name !== 'AbortError') {
                 alert("Le partage n'a pas pu être effectué.");
               }
+            }
+          });
+        }
+
+        const openHaOverlay = document.getElementById('openHaOverlay');
+        const haWidgetModal = document.getElementById('haWidgetModal');
+        const closeHaWidgetBtn = document.getElementById('closeHaWidgetBtn');
+
+        if (openHaOverlay && haWidgetModal && closeHaWidgetBtn) {
+          const openHaModal = () => {
+            haWidgetModal.classList.add('open');
+            haWidgetModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overscrollBehaviorY = 'none';
+          };
+
+          const closeHaModal = () => {
+            haWidgetModal.classList.remove('open');
+            haWidgetModal.style.display = 'none';
+            document.body.style.overflow = '';
+            document.body.style.overscrollBehaviorY = '';
+          };
+
+          openHaOverlay.addEventListener('click', openHaModal);
+          closeHaWidgetBtn.addEventListener('click', closeHaModal);
+          closeHaWidgetBtn.addEventListener('mouseenter', () => closeHaWidgetBtn.style.background = '#E0E0E8');
+          closeHaWidgetBtn.addEventListener('mouseleave', () => closeHaWidgetBtn.style.background = '#EFEFF4');
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && haWidgetModal.style.display === 'flex') {
+              closeHaModal();
             }
           });
         }
