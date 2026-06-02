@@ -6,6 +6,19 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="MAVANA, Association Manambato Vavony Nature, Madagascar, Manambato, Vavony, sport, VTT, kayak, natation, éducation, environnement, reboisement, tourisme écologique, énergie renouvelable, lutte pauvreté" name="keywords">
     <meta content="L'Association MAVANA agit pour la préservation de la nature, le développement communautaire par le sport (VTT, kayak, natation) et l'éducation dans la région de Manambato et Vavony à Madagascar." name="description">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Association MAVANA">
+    <meta property="og:title" content="Fête de l'Indépendance de Madagascar - MAVANA">
+    <meta property="og:description" content="Grande soirée dansante MAVANA le samedi 20 juin 2026 à Saint-Denis, avec Sitraka et Telo Miova et une expérience gastronomique malgache signée Patrick Rabe.">
+    <meta property="og:url" content="https://association-mavana.org/?event=independance-2026">
+    <meta property="og:image" content="https://association-mavana.org/img/affiche_20_juin.jpg">
+    <meta property="og:image:secure_url" content="https://association-mavana.org/img/affiche_20_juin.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Affiche de la Fête de l'Indépendance de Madagascar organisée par MAVANA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fête de l'Indépendance de Madagascar - MAVANA">
+    <meta name="twitter:description" content="Grande soirée dansante MAVANA le samedi 20 juin 2026 à Saint-Denis.">
+    <meta name="twitter:image" content="https://association-mavana.org/img/affiche_20_juin.jpg">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -677,11 +690,13 @@
         const shareEventStatus = document.getElementById('shareEventStatus');
         if (shareEventBtn) {
           shareEventBtn.addEventListener('click', async () => {
-            const eventUrl = `${window.location.origin}${window.location.pathname}#section-event`;
+            const eventUrl = new URL(window.location.href);
+            eventUrl.searchParams.set('event', 'independance-2026');
+            eventUrl.hash = 'section-event';
             const shareData = {
               title: "Fête de l'Indépendance de Madagascar - MAVANA",
               text: "MAVANA vous invite à sa soirée dansante pour la Fête de l'Indépendance de Madagascar, le samedi 20 juin 2026 à Saint-Denis.",
-              url: eventUrl
+              url: eventUrl.toString()
             };
 
             try {
