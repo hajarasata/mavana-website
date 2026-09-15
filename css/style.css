@@ -23,7 +23,7 @@
 .border-primary { border-color: var(--bs-primary) !important; }
 
 /* --- Typographie Globale --- */
-body {
+body, p{
     font-family: 'Inter', sans-serif;
     color: var(--dark);
 }
@@ -38,8 +38,8 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 700;
 }
 
-p, .text-muted {
-    color: var(--grey) !important;
+.text-muted {
+    color: #6c757d !important;
 }
 
 /* --- Helper Classes HTML --- */
