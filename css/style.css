@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 700;
 }
 
-p, .text-secondary, .text-muted {
-    color: var(--text-dark) !important;
+p, .text-muted {
+    color: var(--dark) !important;
 }
 
 /* --- Helper Classes HTML --- */
@@ -206,7 +206,7 @@ p, .text-secondary, .text-muted {
 }
 
 /* 2. "Comment MAVANA fait la différence" */
-.text-mavana-primary,
+.text-mavana-white,
 .section-title h1,
 .section-title h2 {
     color: var(--primary) !important;
@@ -305,3 +305,10 @@ p, .text-secondary, .text-muted {
 .btn-secondary {
     color: var(--light) !important;
 }
+
+/* Surcharge pour les fonds clairs (bg-light) */
+.bg-light {
+    background-color: var(--light) !important;
+    color: var(--dark) !important;
+}
+
