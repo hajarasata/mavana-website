@@ -4,8 +4,13 @@
     --secondary: #8a6842;      /* Marron */
     --light: #FFF8DD;          /* Crème */
     --dark: #152e22;           /* Vert foncé */
-    --gray-bg: #F4F4F2;        /* Fond gris */
-    --text-dark: #152e22;      /* Texte principal */
+    --grey: #F4F4F2;        /* Fond gris */
+
+    --bs-primary: var(--primary);
+    --bs-secondary: var(--secondary);
+    --bs-light: var(--light);
+    --bs-dark: var(--dark);
+    --bs-grey: var(--grey)
 
 }
 
