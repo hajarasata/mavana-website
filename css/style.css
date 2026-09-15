@@ -680,3 +680,19 @@
 /* Les surcharges ci-dessus concernent surtout les classes Bootstrap standard. */
 
 /* =========== FIN DES BOOTSTRAP OVERRIDES =========== */
+
+/* --- Charte Graphique MAVANA --- */
+.bg-mavana-cream { background-color: #FFF8DD !important; }
+.bg-mavana-grey { background-color: #F4F4F2 !important; }
+.text-mavana-primary { color: #307055 !important; }
+.text-mavana-accent { color: #AF5F02 !important; }
+
+.btn-mavana {
+    background-color: #307055;
+    color: #ffffff !important;
+    border-radius: 30px;
+}
+
+.btn-mavana:hover {
+    background-color: #AF5F02;
+}
