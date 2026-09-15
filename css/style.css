@@ -73,11 +73,19 @@ p, .text-secondary, .text-muted {
     opacity: 1;
 }
 
-/* Bouton Faire un don dans la navbar */
-.navbar .btn-primary,
+/* Bouton Espace Adhérent dans le menu */
 .navbar .btn-mavana {
-    background-color: var(--secondary) !important; /* Ocre pour ressortir */
-    border-color: var(--secondary) !important;
+    background-color: #AF5F02 !important;
+    border-color: #AF5F02 !important;
+    color: #FFFFFF !important;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.navbar .btn-mavana:hover {
+    background-color: #FFF8DD !important;
+    border-color: #FFF8DD !important;
+    color: #12291E !important; /* Texte vert foncé au survol */
 }
 
 /* Vue Mobile */
