@@ -5,7 +5,7 @@
     --light: #FFF8DD;          /* Crème */
     --dark: #152e22;           /* Vert foncé */
     --gray-bg: #F4F4F2;        /* Fond gris */
-    --text-dark: #254029;      /* Texte principal */
+    --text-dark: #152e22;      /* Texte principal */
 }
 
 /* --- Typographie Globale --- */
@@ -181,7 +181,7 @@ p, .text-secondary, .text-muted {
 .text-mavana-primary,
 .section-title h1,
 .section-title h2 {
-    color: #307055 !important;
+    color: #254029 !important;
 }
 
 /* Badge au-dessus des titres ("Nos engagements", etc.) */
@@ -189,7 +189,7 @@ p, .text-secondary, .text-muted {
 .section-title span,
 .bg-mavana-cream {
     background-color: #FFF8DD !important;
-    color: #307055 !important; /* Vert MAVANA au lieu de l'ocre */
+    color: #152e22 !important; /* Vert MAVANA au lieu de l'ocre */
     font-weight: 600;
 }
 
@@ -212,21 +212,7 @@ p, .text-secondary, .text-muted {
     z-index: 1020 !important;
     background-color: #12291E !important; /* Vert foncé au défilement */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
 
-/* 5. Alignement parfait des icônes dans les cercles (À propos & Engagements) */
-.service-icon,
-.icon-box,
-.causes-icon {
-    width: 80px !important;
-    height: 80px !important;
-    background-color: #FFF8DD !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 auto 1.5rem auto !important;
-    padding: 0 !important; /* Annule tout décalage intérieur */
 }
 
 .service-icon i,
@@ -258,4 +244,37 @@ p, .text-secondary, .text-muted {
 .footer a.btn-social:hover {
     background-color: #AF5F02 !important;
     border-color: #AF5F02 !important;
+}
+
+/* CORRECTION CENTRAGE PARFAIT DES ICÔNES DANS LES CERCLES */
+
+/* 1. Réinitialisation du conteneur rond */
+.service-item .service-icon,
+.causes-item .causes-icon,
+.service-icon {
+    width: 90px !important;
+    height: 90px !important;
+    background-color: #FFF8DD !important; /* Crème MAVANA */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 1.5rem auto !important;
+    position: relative !important;
+    top: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Annulation des décalages sur l'icône elle-même */
+.service-item .service-icon i,
+.causes-item .causes-icon i,
+.service-icon i {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    font-size: 38px !important; /* Taille de l'icône */
+    display: inline-block !important;
 }
