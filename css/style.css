@@ -17,7 +17,7 @@
 /* --- Typographie Globale --- */
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--text-dark);
+    color: var(--dark);
 }
 
 /* Titres style (Fredoka) */
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 p, .text-muted {
-    color: var(--dark) !important;
+    color: var(--secondary) !important;
 }
 
 /* --- Helper Classes HTML --- */
