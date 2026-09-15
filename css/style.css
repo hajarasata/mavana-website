@@ -52,10 +52,18 @@ p, .text-secondary, .text-muted {
 }
 
 /* NAVBAR / BARRE DE NAVIGATION */
+.fixed-top,
 .navbar,
-.navbar-dark,
-.navbar.sticky-top {
-    background-color: var(--dark) !important; /* Vert foncé MAVANA */
+.sticky-top {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 1030 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #307055 !important; /* Vert foncé MAVANA */
 }
 
 /* Liens du menu en blanc */
