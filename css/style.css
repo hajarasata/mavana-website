@@ -415,8 +415,10 @@ p, .text-secondary, .text-muted {
     border-radius: 50% !important;
 }
 
-#spinner {
+#spinner,
+#spinner.show {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
+    pointer-events: none !important;
 }
