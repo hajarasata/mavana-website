@@ -1,4 +1,4 @@
-/* CHARTE GRAPHIQUE */
+/* VARIABLES CHARTE GRAPHIQUE */
 :root {
     --primary: #307055;        /* Vert MAVANA */
     --secondary: #8a6842;      /* Marron */
@@ -111,8 +111,8 @@ p, .text-secondary, .text-muted {
 }
 
 .navbar-brand .logo-img {
-    height: 35px !important;
-    width: auto !important;
+    height: 32px !important;
+    width: 32px !important;
     object-fit: contain;
     display: block;
 }
