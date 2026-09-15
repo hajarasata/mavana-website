@@ -1,167 +1,143 @@
-/********** Template CSS **********/
-
+/======== VARIABLES & CHARTE GRAPHIQUE MAVANA ======== */
 :root {
-    --primary: #3D7E4D;      
-    --secondary: #FFF0E6;      
-    --light: #F8F8F9;
-    --dark: #001D23;
-
-    /* --- AJOUTEZ CECI --- */
-    --bs-primary: #3D7E4D;
+    --primary: #307055;        /* Vert*/
+    --secondary: #AF5F02;      /* Marron */
+    --light: #FFF8DD;          /* Crème */
+    --dark: #12291E;           /* Vert/Noir */
+    --gray-bg: #F4F4F2;        /* Gris */
+    --text-dark: #2D3748;      /* Couleur de texte principal */
 }
 
-.back-to-top {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
+/* --- Classes Utilitaires (HTML) --- */
+.bg-mavana-cream { background-color: var(--light) !important; }
+.bg-mavana-grey { background-color: var(--gray-bg) !important; }
+.text-mavana-primary { color: var(--primary) !important; }
+.text-mavana-accent { color: var(--secondary) !important; }
+
+/* Boutons */
+.btn-mavana,
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #FFFFFF !important;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.btn-mavana:hover,
+.btn-primary:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: #FFFFFF !important;
 }
 
-
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    border-radius: 30px;
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary) !important;
+    color: #FFFFFF !important;
 }
 
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
+/* ======== TYPOGRAPHIE & COULEURS DE TEXTE ======= */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
 }
 
+h1, h2, h3, 
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Fredoka', 'Saira', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+}
 
-/*** Button ***/
-.btn {
-    font-weight: 500;
+p, .text-secondary, .text-muted {
+    color: var(--text-dark) !important;
+}
+
+/* bannières sombres */
+.page-header h1, 
+.page-header p, 
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a,
+.carousel-caption h1,
+.carousel-caption p {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Badges / Pilules */
+.rounded-pill {
+    font-weight: 600;
+}
+
+/* ======== NAVBAR & TOP-BAR) ======== */
+.top-bar {
+    height: 45px;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    background-color: rgba(18, 41, 30, 0.9);
+}
+
+.navbar {
     transition: .5s;
 }
 
-.btn.btn-primary,
-.btn.btn-outline-primary:hover {
-    color: #FFFFFF;
-}
-
-.btn.btn-primary:hover {
-    color: var(--primary);
+.navbar-dark {
     background: transparent;
 }
 
-.btn-square {
-    width: 38px;
-    height: 38px;
-}
-
-.btn-sm-square {
-    width: 32px;
-    height: 32px;
-}
-
-.btn-lg-square {
-    width: 48px;
-    height: 48px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-}
-
-
-/*** Navbar ***/
-.fixed-top {
+.navbar.sticky-top {
+    top: 0;
     transition: .5s;
+    background: var(--dark) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.top-bar {
-    height: 45px;
-    border-bottom: 1px solid rgba(255, 255, 255, .07);
-}
-
-.top-bar .text-start {
-    display: flex;
-    align-items: center;
-    min-width: 0;
-    white-space: nowrap;
-}
-
-.top-bar .text-start small:first-child {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.top-bar a[href^="tel:"] {
-    white-space: nowrap;
-}
-
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
-
-.navbar .navbar-nav .nav-link {
-    margin-right: 30px;
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 25px;
     padding: 25px 0;
+    font-size: 16px;
     font-weight: 500;
+    color: #FFFFFF !important;
     outline: none;
-    transition: color .5s ease;
+    transition: .5s;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-/* 1. Couleur par défaut en haut de page (navbar transparente) -> TEXTE NOIR */
-.navbar.fixed-top:not(.sticky-top) .navbar-nav .nav-link {
-    color: var(--dark);
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--secondary) !important;
 }
 
-/* 2. Couleur par défaut après scroll (navbar noire) -> TEXTE BLANC */
-.navbar.fixed-top.sticky-top .navbar-nav .nav-link {
-    color: #FFFFFF;
-}
-
-/* 3. Couleur au survol et pour le lien actif -> TEXTE VERT (prioritaire) */
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary) !important;
-}
-
-/* 4. Règles pour la vue mobile (menu hamburger) - Inchangé */
+/* Menu Mobile (Hamburger) */
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav {
+    .navbar-dark {
+        background: var(--dark) !important;
+    }
+
+    .navbar-dark .navbar-nav {
         margin-top: 10px;
-        border-top: 1px solid rgba(0, 0, 0, .07);
+        border-top: 1px solid rgba(255, 255, 255, .1);
         background: var(--dark);
+        padding: 15px;
     }
 
-    /* Sur mobile, le fond est toujours noir, donc le texte doit être blanc */
-    .navbar .navbar-nav .nav-link {
+    .navbar-dark .navbar-nav .nav-link {
         padding: 10px 0;
-        color: #FFFFFF;
+        margin-right: 0;
+        color: #FFFFFF !important;
     }
 
-    /* Sauf pour le lien actif qui doit rester vert */
-    .navbar .navbar-nav .nav-link.active {
-        color: var(--primary) !important;
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--secondary) !important;
     }
 }
 
-/* --- Fin de la section à modifier --- */
-
-/* 5. Règles pour le dropdown sur desktop */
+/* Dropdown Menu sur desktop */
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -171,6 +147,7 @@
         transform-origin: 0% 0%;
         transition: .5s;
         opacity: 0;
+        border-radius: 0 0 10px 10px;
     }
 
     .navbar .nav-item:hover .dropdown-menu {
@@ -181,10 +158,7 @@
     }
 }
 
-/* --- FIN navbar --- */
-
-
-/*** Header ***/
+/* ========== CAROUSEL & PAGE HEADER) ========== */
 .carousel-caption {
     top: 0;
     left: 0;
@@ -194,21 +168,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(0, 29, 35, .8);
+    background: rgba(18, 41, 30, 0.70);
     z-index: 1;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 15%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     width: 3rem;
     height: 3rem;
-    background-color: var(--dark);
-    border: 12px solid var(--dark);
+    background-color: var(--primary);
+    border: 12px solid var(--primary);
     border-radius: 3rem;
 }
 
@@ -229,41 +198,36 @@
 .page-header {
     padding-top: 12rem;
     padding-bottom: 6rem;
-    background: linear-gradient(rgba(0, 29, 35, .8), rgba(0, 29, 35, .8)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(18, 41, 30, 0.75), rgba(18, 41, 30, 0.75)), url(../img/event.png) center center no-repeat;
     background-size: cover;
 }
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: #999999;
+    color: #E2E8F0;
 }
 
-/* =========== STYLE POUR LA SECTION ÉVÉNEMENT EN HAUT DE PAGE =========== */
-
+/* Section événement spéciale */
 #section-event {
-    /* --- LIGNE MODIFIÉE --- */
-    /* On passe l'opacité de 0.85 à 0.70 (ou une valeur qui vous convient) */
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1)), url(../img/event.png);
-
+    background: linear-gradient(rgba(18, 41, 30, 0.8), rgba(18, 41, 30, 0.8)), url(../img/event.png);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }
 
-/* On s'assure que le titre reste bien visible */
 #section-event .d-inline-block.rounded-pill {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .upcoming-event-poster {
-    background: #f5f2ed;
+    background: var(--light);
 }
 
 .upcoming-event-poster img {
     display: block;
 }
 
-
-/*** Causes ***/
+/* ======= CAUSES, SERVICES, TEAM) ========= */
+/* Barres de progression */
 .causes-item .progress {
     height: 5px;
     border-radius: 0;
@@ -301,7 +265,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(18, 41, 30, 0.75);
     overflow: hidden;
     opacity: 0;
     transition: .5s;
@@ -312,16 +276,15 @@
     opacity: 1;
 }
 
-
-/*** Service ***/
+/* Cartes d'action */
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .06);
+    border-radius: 10px;
 }
 
-
-/*** Donate ***/
+/* Dons */
 .donate {
-    background: rgba(0, 29, 35, .8);
+    background: rgba(18, 41, 30, 0.85);
 }
 
 .btn-group .btn-light:hover,
@@ -330,8 +293,12 @@
     border-color: var(--primary);
 }
 
+/* Team */
+.team-item {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
 
-/*** Team ***/
 .team-item img {
     position: relative;
     top: 0;
@@ -339,43 +306,15 @@
 }
 
 .team-item:hover img {
-    top: -30px;
+    top: -8px;
 }
 
 .team-item .team-text {
     position: relative;
-    height: 100px;
     transition: .5s;
 }
 
-.team-item:hover .team-text {
-    margin-top: -60px;
-    height: 160px;
-}
-
-.team-item .team-text .team-social {
-    opacity: 0;
-    transition: .5s;
-}
-
-.team-item:hover .team-text .team-social {
-    opacity: 1;
-}
-
-.team-item .team-social .btn {
-    display: inline-flex;
-    color: var(--primary);
-    background: #FFFFFF;
-    border-radius: 40px;
-}
-
-.team-item .team-social .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-
-/*** Testimonial ***/
+/* Témoignages */
 .testimonial-carousel::before {
     position: absolute;
     content: "";
@@ -416,283 +355,62 @@
     background: var(--light);
     transform: scale(.8);
     transition: .5s;
+    border-radius: 10px;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
     background: var(--primary);
+    color: #FFFFFF !important;
     transform: scale(1);
 }
 
-.testimonial-carousel .owl-item .testimonial-text *,
-.testimonial-carousel .owl-item .testimonial-item img {
-    transition: .5s;
-}
-
 .testimonial-carousel .owl-item.center .testimonial-text * {
-    color: var(--light) !important;
+    color: #FFFFFF !important;
 }
 
-.testimonial-carousel .owl-item.center .testimonial-item img {
-    background: var(--primary) !important;
-} 
-
-.testimonial-carousel .owl-nav {
-    position: absolute;
-    width: 350px;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transition: .5s;
-    z-index: 1;
+/* ========= FOOTER & BOUTON RETOUR EN HAUT ========== */
+.footer {
+    background-color: var(--dark) !important;
 }
-
-.testimonial-carousel:hover .owl-nav {
-    width: 300px;
-    opacity: 1;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: relative;
-    color: var(--primary);
-    font-size: 45px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    color: var(--dark);
-}
-
-
-/*** Footer ***/
 
 .footer .btn.btn-link {
     display: block;
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: rgba(255,255,255,0.5);
+    color: #CBD5E0;
+    font-size: 15px;
     font-weight: normal;
-    text-transform: capitalize;
+    text-decoration: none;
     transition: .3s;
 }
 
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: rgba(255,255,255,0.5);
-    margin-right: 10px;
-}
-
 .footer .btn.btn-link:hover {
-    color: var(--light);
+    color: var(--secondary);
     letter-spacing: 1px;
     box-shadow: none;
 }
 
-.footer .btn.btn-square {
-    color: rgba(255,255,255,0.5);
-    border: 1px solid rgba(255,255,255,0.5);
-}
-
-.footer .btn.btn-square:hover {
-    color: var(--secondary);
-    border-color: var(--light);
-}
-
-.footer .copyright {
+.copyright {
     padding: 25px 0;
     font-size: 15px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
 
-.footer .copyright a {
+.copyright a {
     color: var(--secondary);
 }
 
-.footer .copyright a:hover {
-    color: var(--primary);
+.copyright a:hover {
+    color: var(--light);
 }
 
-
-/* =========== BOOTSTRAP OVERRIDES =========== */
-
-/* Couleur de texte principale */
-.text-primary {
-    color: var(--primary) !important; /* !important est nécessaire ici car Bootstrap utilise aussi !important pour .text-primary */
-}
-
-/* Arrière-plan principal */
-.bg-primary {
-    background-color: var(--primary) !important;
-}
-
-/* Bordure principale */
-.border-primary {
-    border-color: var(--primary) !important;
-}
-/* Cas spécifique pour les bordures épaisses utilisées dans le template */
-.border-5.border-primary {
-    border-color: var(--primary) !important;
-}
-.border-top.border-5.border-primary { /* Pour .causes-item */
-    border-top-color: var(--primary) !important;
-}
-.border-bottom.border-5.border-primary { /* Pour la section "Qui sommes-nous" */
-     border-bottom-color: var(--primary) !important;
-}
-
-
-/* Boutons principaux */
-.btn-primary {
-    color: #FFFFFF; /* Texte blanc pour contraster avec le fond vert */
-    background-color: var(--primary);
-    border-color: var(--primary);
-}
-
-.btn-primary:hover {
-    color: #FFFFFF;
-    background-color: #2e603a; /* Un vert un peu plus foncé au survol */
-    border-color: #2a5734;
-}
-
-.btn-check:focus+.btn-primary, .btn-primary:focus,
-.btn-check:checked+.btn-primary,
-.btn-check:active+.btn-primary,
-.btn-primary:active,
-.btn-primary.active,
-.show>.btn-primary.dropdown-toggle {
-    color: #FFFFFF;
-    background-color: #2a5734; /* Vert encore plus foncé pour l'état actif/focus */
-    border-color: #254b2f;
-    box-shadow: 0 0 0 .25rem rgba(61, 126, 77, 0.5); /* Ombre avec une teinte verte */
-}
-
-/* Boutons outline principaux */
-.btn-outline-primary {
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
-.btn-outline-primary:hover {
-    color: #FFFFFF;
-    background-color: var(--primary);
-    border-color: var(--primary);
-}
-
-.btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus,
-.btn-check:checked+.btn-outline-primary,
-.btn-check:active+.btn-outline-primary,
-.btn-outline-primary:active,
-.btn-outline-primary.active,
-.btn-outline-primary.dropdown-toggle.show {
-    color: #FFFFFF;
-    background-color: var(--primary);
-    border-color: var(--primary);
-    box-shadow: 0 0 0 .25rem rgba(61, 126, 77, 0.5); /* Ombre avec une teinte verte */
-}
-
-/* ============================================== */
-/* === Style pour le bouton Afficher/Masquer MP === */
-/* ============================================== */
-
-/* Style du bouton par défaut (avant survol) */
-#toggle-password-btn {
-    color: #6c757d;  /* Couleur de texte grise standard de Bootstrap pour 'secondary' */
-    border-color: #6c757d;
-    opacity: 0.75; /* On le rend légèrement moins opaque qu'un bouton standard */
-    transition: all 0.2s ease-in-out; /* Transition douce pour le survol */
-}
-
-/* Style du bouton au survol ou au focus */
-#toggle-password-btn:hover,
-#toggle-password-btn:focus {
-    color: #fff; /* Texte blanc */
-    background-color: #5c636a; /* Fond gris foncé */
-    border-color: #565e64;
-    opacity: 1; /* Pleinement opaque au survol */
-    box-shadow: none; /* On retire l'ombre de focus par défaut si elle ne vous plaît pas */
-}
-
-/* On s'assure que l'icône à l'intérieur hérite bien de la couleur */
-#toggle-password-btn i {
-    color: inherit;
-}
-
-
-
-/* Liens de navigation actifs (déjà correctement géré par votre style.css existant avec var(--primary)) */
-/* .navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-} */
-
-/* Éléments de dropdown actifs */
-.dropdown-menu .dropdown-item.active, 
-.dropdown-menu .dropdown-item:active {
-    color: #fff;
-    background-color: var(--primary);
-}
-
-/* Boutons radio dans le formulaire de don */
-.btn-group input[type="radio"]:checked+label {
-    color: var(--primary); /* Template utilise déjà var(--primary) ici, mais on s'assure */
-    border-color: var(--primary);
-}
-
-/* Spinner */
-.spinner-grow.text-primary {
-    /* Sera pris en charge par la règle .text-primary ci-dessus */
-}
-
-/* Liens dans le footer (s'ils utilisaient .text-primary) */
-.footer .btn.btn-link {
-    /* Le template les style déjà, mais si vous voulez forcer la couleur primaire : */
-    /* color: var(--primary); */
-}
-/* Le template style .footer .btn.btn-link::before avec rgba(255,255,255,0.5) */
-/* Si vous voulez que cette icone soit verte aussi : */
-.footer .btn.btn-link::before {
-    /* color: var(--primary); */ /* Décommentez si besoin */
-}
-
-
-/* Spécifique au template pour les titres des "causes" */
-.causes-item .d-inline-block.bg-primary {
-    background-color: var(--primary) !important; /* Assurez-vous que cela prend le dessus */
-}
-
-/* Spécifique au template pour les pills "Qui sommes-nous?" etc. */
-.d-inline-block.rounded-pill.bg-secondary.text-primary {
-    /* La couleur du texte est gérée par .text-primary ci-dessus */
-    /* background-color: var(--secondary); /* S'assurer que le fond reste --secondary */
-}
-
-/* Styles spécifiques du template à vérifier et ajuster si la couleur primaire est utilisée */
-/* Exemple : .team-item .team-social .btn, .testimonial-carousel etc. */
-/* La plupart des éléments de votre template utilisent déjà var(--primary) pour les couleurs personnalisées. */
-/* Les surcharges ci-dessus concernent surtout les classes Bootstrap standard. */
-
-/* =========== FIN DES BOOTSTRAP OVERRIDES =========== */
-
-/* --- Charte Graphique MAVANA --- */
-.bg-mavana-cream { background-color: #FFF8DD !important; }
-.bg-mavana-grey { background-color: #F4F4F2 !important; }
-.text-mavana-primary { color: #307055 !important; }
-.text-mavana-accent { color: #AF5F02 !important; }
-
-.btn-mavana {
-    background-color: #307055;
-    color: #ffffff !important;
-    border-radius: 30px;
-}
-
-.btn-mavana:hover {
-    background-color: #AF5F02;
+/* Bouton Back to Top */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+    border-radius: 50% !important;
 }
