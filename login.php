@@ -84,10 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Plus d'infos sur l'association :</small>
-                <a class="text-white-50 ms-3" href="https://facebook.com/associationmavana" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a class="text-white-50 ms-3" href="https://twitter.com/asso_mavana" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a class="text-white-50 ms-3" href="https://www.linkedin.com/company/mavana" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a class="text-white-50 ms-3" href="https://www.instagram.com/association_mavana" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
 
@@ -176,10 +173,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h1 class="fw-bold text-primary mb-4">ASSOCIATION <span class="text-white">MAVANA</span></h1>
                     <p>Agir pour un avenir durable à Manambato-Vavony, Madagascar, par le sport, l'éducation et la préservation de la nature.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square me-1" href="https://twitter.com/asso_mavana" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square me-1" href="https://facebook.com/associationmavana" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square me-1" href="https://youtube.com/@associationmavana" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square me-0" href="https://www.linkedin.com/company/mavana" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
