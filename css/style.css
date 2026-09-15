@@ -107,19 +107,20 @@ p, .text-secondary, .text-muted {
 .navbar-brand {
     display: flex !important;
     align-items: center !important;
-    gap: 10px;
+    gap: 12px !important;
 }
 
 .navbar-brand .logo-img {
-    height: 32px !important;
-    width: 32px !important;
+    height: 48px !important;
+    width: auto !important;
     object-fit: contain;
-    display: block;
 }
 
 .navbar-brand h1 {
     color: var(--primary) !important;
-    font-size: 26px !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
     line-height: 1 !important;
     margin: 0 !important;
 }
@@ -269,33 +270,20 @@ p, .text-secondary, .text-muted {
 
 /* CORRECTION CENTRAGE PARFAIT DES ICÔNES DANS LES CERCLES */
 
-/* 1. Réinitialisation du conteneur rond */
-.service-item .service-icon,
-.causes-item .causes-icon,
-.service-icon {
-    width: 90px !important;
-    height: 90px !important;
-    background-color: #FFF8DD !important; /* Crème MAVANA */
-    border-radius: 50% !important;
-    display: flex !important;
+/* Centrage parfait des icônes dans les cercles */
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 auto 1.5rem auto !important;
-    position: relative !important;
-    top: 0 !important;
     padding: 0 !important;
 }
 
-/* 2. Annulation des décalages sur l'icône elle-même */
-.service-item .service-icon i,
-.causes-item .causes-icon i,
-.service-icon i {
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
+.btn-square i,
+.btn-sm-square i,
+.btn-lg-square i {
     margin: 0 !important;
-    padding: 0 !important;
     line-height: 1 !important;
-    font-size: 38px !important; /* Taille de l'icône */
-    display: inline-block !important;
+    display: block !important;
 }
