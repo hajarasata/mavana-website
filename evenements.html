@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Nos Actions & Événements - Association MAVANA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Association MAVANA, actions solidaires, Raid Solidaire, Manambato-Vavony, Madagascar" name="keywords">
-    <meta content="Découvrez les actions et événements organisés par l'Association MAVANA pour soutenir Manambato-Vavony à Madagascar." name="description">
+    <meta content="MAVANA, Raid Solidaire 2025, Sur la route de MAVANA, Move For Mada, Manambato-Vavony, Madagascar" name="keywords">
+    <meta content="Découvrez nos articles, nos actions sur le terrain et la rétrospective du Raid Solidaire pour Manambato-Vavony à Madagascar." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -34,9 +34,7 @@
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Chargement...</span>
-        </div>
+        <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
 
@@ -83,7 +81,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Nos Actions & Événements</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-4">Événements & Rétrospectives</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="index.html">Accueil</a></li>
@@ -94,103 +92,182 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Section Rétrospective Événement Start -->
-    <div class="container-xxl py-5">
+    <!-- Prochain Événement Start -->
+    <div id="section-event" class="mb-5 py-3"> 
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4 text-primary fw-medium">Rétrospective</p>
-                <h1 class="mb-4">Raid Solidaire à Madagascar</h1>
-                <p class="text-muted">Retour sur notre dernier grand événement solidaire pour le soutien des communautés locales de Manambato-Vavony.</p>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">À venir</div>
+                <h1 class="display-6 mt-2">Prochainement</h1>
             </div>
 
-            <div class="row g-4 align-items-center mb-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative overflow-hidden rounded shadow">
-                        <img class="img-fluid w-100" src="img/event-raid.jpg" alt="Raid Solidaire MAVANA" style="object-fit: cover; min-height: 350px;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h3 class="mb-3 text-primary">Une aventure sportive et humaine</h3>
-                    <p>Grâce à la participation des équipes, bénévoles et partenaires, le Raid Solidaire a permis d'associer le défi sportif à une action concrète sur le terrain.</p>
-                    
-                    <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
-                            <div class="border-start border-4 border-primary ps-3">
-                                <h2 class="fw-bold text-dark mb-0">100%</h2>
-                                <span class="text-muted">Des fonds reversés aux projets</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="border-start border-4 border-primary ps-3">
-                                <h2 class="fw-bold text-dark mb-0">Manambato</h2>
-                                <span class="text-muted">Impact direct sur le village</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="mb-4">Les fonds collectés lors de cette édition contribuent à équiper les structures sportives scolaires et à fournir du matériel pédagogique pour les enfants de la commune.</p>
-
-                    <div class="d-flex align-items-center gap-3">
-                        <button id="shareEventBtn" class="btn btn-outline-primary rounded-pill px-4">
-                            <i class="fa fa-share-alt me-2"></i>Partager l'action
-                        </button>
-                        <span id="shareEventStatus" class="small text-success"></span>
-                    </div>
+            <div class="row g-5 justify-content-center mb-5">
+                <div class="col-lg-8 col-xl-7 wow fadeInUp" data-wow-delay="0.2s">
+                    <a class="upcoming-event-poster d-block overflow-hidden rounded shadow-lg" href="img/France%20Sur%20la%20route%20de%20MAVANA.png" target="_blank" rel="noopener" aria-label="Ouvrir l'affiche complète de l'événement">
+                        <img src="img/France%20Sur%20la%20route%20de%20MAVANA.png" class="img-fluid w-100" alt="Affiche Sur la route de MAVANA, randonnée solidaire à La Ciotat organisée par Move For Mada">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Section Rétrospective Événement End -->
+    <!-- Prochain Événement End -->
 
-    <!-- Nos Piliers d'Actions Start -->
+    <!-- Section Articles & Actualités Start -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4 text-primary fw-medium">Nos Domaines d'Intervention</p>
-                <h1 class="mb-4">Des actions durables au quotidien</h1>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Fil d'actualités</div>
+                <h1 class="display-6 mt-2">Retours sur nos actions & décryptages</h1>
             </div>
 
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white rounded h-100 p-5 shadow-sm">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-running text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Sport & Jeunesse</h4>
-                        <p class="mb-0 text-muted">Aménagement de terrains, fourniture d'équipements sportifs et organisation de rencontres pour promouvoir la cohésion et le bien-être des jeunes.</p>
+            <!-- ARTICLE 1 : Raid Solidaire 2025 -->
+            <article class="bg-white p-4 p-lg-5 rounded shadow-sm mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row g-4 align-items-center mb-4">
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary px-3 py-2 rounded-pill mb-2">Bilan Événement</span>
+                        <h2 class="text-dark fw-bold mb-3">Raid Solidaire 2025 : Un élan collectif pour Manambato-Vavony</h2>
+                        <p class="text-muted">
+                            L'édition 2025 du Raid Solidaire s'est achevée sur une note de réussite collective exceptionnelle. Alliant épreuves sportives (VTT, kayak, course à pied) et engagement humain, cette initiative a rassemblé participants, bénévoles et partenaires locaux autour d'un objectif commun.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <!-- Vidéo principale -->
+                        <video controls poster="img/miniature-video.jpg" class="shadow-sm w-100 rounded" style="max-height: 280px; object-fit: cover;">
+                            <source src="img/retro.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white rounded h-100 p-5 shadow-sm">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-book-reader text-primary fs-4"></i>
+                <!-- Détails de l'article (3 colonnes : Ce qu'on a fait / Ce que ça a donné / Remerciements) -->
+                <div class="row g-4 my-2">
+                    <div class="col-md-4">
+                        <div class="border-start border-3 border-primary ps-3 h-100">
+                            <h5 class="fw-bold text-primary"><i class="fas fa-tasks me-2"></i>Ce que nous avons fait</h5>
+                            <p class="small text-muted mb-0">
+                                Organisation d'un parcours sportif : rassembler les participants, autour de la cause, par le sport. Une logistique d'accueil sur place. Un état des lieux de l'EPP Vavony avec la directrice de l'établissement pour voir ce dont ils ont besoin : réhabilitation de l'école, fond pour les maitres FRAM, construction de bancs-pupitres et une bibliothèque accessible. Mais aussi un rapprochement avec la population pour discuter de la situation et des besoins.
+                            </p>
                         </div>
-                        <h4 class="mb-3">Éducation & Écoles</h4>
-                        <p class="mb-0 text-muted">Distribution de kits scolaires, soutien à l'amélioration des conditions d'apprentissage et accompagnement de l'équipe éducative locale.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border-start border-3 border-success ps-3 h-100">
+                            <h5 class="fw-bold text-success"><i class="fas fa-chart-line me-2"></i>Ce que ça a apporté</h5>
+                            <p class="small text-muted mb-0">
+                                Un financement direct de matériel scolaire pour les enfants du village des pêcheurs : des fournitures et des cartables. Mais aussi de quoi developper leur créativité. Des débuts de plusieurs autres projets pour améliorer leur qualité de vie.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border-start border-3 border-warning ps-3 h-100">
+                            <h5 class="fw-bold text-dark"><i class="fas fa-heart text-danger me-2"></i>Nos remerciements</h5>
+                            <p class="small text-muted mb-0">
+                                Un grand **Misaotra (merci)** aux athlètes, aux bénévoles sur le terrain, aux donateurs et à nos partenaires pour leur générosité et leur énergie communicative ! Merci à vous pour le sourire donné aux enfants !
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white rounded h-100 p-5 shadow-sm">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-leaf text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Environnement</h4>
-                        <p class="mb-0 text-muted">Sensibilisation à la préservation de la biodiversité locale autour du lac Manambato et initiatives d'éco-citoyenneté avec les villageois.</p>
+                <!-- Photos souvenirs & Galerie -->
+                <div class="row g-3 my-4">
+                    <div class="col-6">
+                        <img src="img/photo-retro-1.jpg" class="img-fluid rounded w-100 shadow-sm" style="height: 220px; object-fit: cover;" alt="Souvenir Raid Solidaire 1">
+                    </div>
+                    <div class="col-6">
+                        <img src="img/photo-retro-2.jpg" class="img-fluid rounded w-100 shadow-sm" style="height: 220px; object-fit: cover;" alt="Souvenir Raid Solidaire 2">
                     </div>
                 </div>
-            </div>
+
+                <!-- Galerie vidéos bonus -->
+                <div class="collapse" id="videoGallery">
+                    <div class="row g-4 mt-1 mb-4">
+                        <div class="col-md-6">
+                            <h6 class="text-start text-muted small mb-2">Moment fort #1</h6>
+                            <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                                <video controls>
+                                    <source src="img/video-bonus-1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-start text-muted small mb-2">Moment fort #2</h6>
+                            <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                                <video controls>
+                                    <source src="img/video-bonus-2.mov" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center pt-2">
+                    <button class="btn btn-outline-primary py-2 px-4 rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#videoGallery" aria-expanded="false" aria-controls="videoGallery">
+                        Voir les vidéos bonus
+                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                            <i class="fa fa-play"></i>
+                        </div>
+                    </button>
+                </div>
+            </article>
+
+<!-- ARTICLE 2 : Zoom Scolarité -->
+            <article class="bg-white p-4 p-lg-5 rounded shadow-sm mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row g-4 align-items-center mb-4">
+                    <div class="col-lg-12">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                            <span class="badge bg-danger px-3 py-2 rounded-pill"><i class="fab fa-instagram me-1"></i> Zoom Instagram & Terrain</span>
+                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> Actualité Éducation</small>
+                        </div>
+                        <h2 class="text-dark fw-bold mb-3">La situation scolaire à Manambato-Vavony : Défis et Actions</h2>
+                        <p class="text-muted fs-6">
+                            Accès aux fournitures, distances à parcourir à pied, état des infrastructures... Nous avons partagé sur notre compte Instagram une infographie complète pour faire un état des lieux de la scolarité des enfants du village. Retrouvez ici les 4 visuels clés de notre publication :
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Grille des 4 images graphiques Instagram -->
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-md-3">
+                        <a href="img/insta-edu-1.jpg" target="_blank" class="d-block overflow-hidden rounded shadow-sm hover-zoom">
+                            <img src="img/insta-edu-1.jpg" class="img-fluid w-100 rounded" alt="Zoom Scolarité MAVANA - Visuel 1" style="aspect-ratio: 1/1; object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="img/insta-edu-2.jpg" target="_blank" class="d-block overflow-hidden rounded shadow-sm hover-zoom">
+                            <img src="img/insta-edu-2.jpg" class="img-fluid w-100 rounded" alt="Zoom Scolarité MAVANA - Visuel 2" style="aspect-ratio: 1/1; object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="img/insta-edu-3.jpg" target="_blank" class="d-block overflow-hidden rounded shadow-sm hover-zoom">
+                            <img src="img/insta-edu-3.jpg" class="img-fluid w-100 rounded" alt="Zoom Scolarité MAVANA - Visuel 3" style="aspect-ratio: 1/1; object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="img/insta-edu-4.jpg" target="_blank" class="d-block overflow-hidden rounded shadow-sm hover-zoom">
+                            <img src="img/insta-edu-4.jpg" class="img-fluid w-100 rounded" alt="Zoom Scolarité MAVANA - Visuel 4" style="aspect-ratio: 1/1; object-fit: cover;">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-light p-4 rounded border-start border-4 border-danger d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <div>
+                        <h6 class="fw-bold mb-1">Suivez nos actualités au quotidien sur Instagram</h6>
+                        <p class="small text-muted mb-0">Retrouvez nos coulisses, stories et témoignages en direct de Madagascar.</p>
+                    </div>
+                    <a href="https://www.instagram.com/mavana.asso" target="_blank" class="btn btn-sm btn-outline-danger rounded-pill px-3">
+                        <i class="fab fa-instagram me-1"></i> Voir le post sur Insta
+                    </a>
+                </div>
+            </article>
+
         </div>
     </div>
-    <!-- Nos Piliers d'Actions End -->
+    <!-- Section Articles End -->
 
     <!-- Call to Action Don Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="bg-primary text-white rounded p-5 text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h2 class="text-white mb-3">Soutenez nos prochaines initiatives</h2>
-                <p class="col-md-8 mx-auto mb-4">Chaque geste compte pour faire grandir nos projets d'éducation, de sport et d'environnement à Manambato-Vavony.</p>
+                <h2 class="text-white mb-3">Soutenez nos prochains projets à Madagascar</h2>
+                <p class="col-md-8 mx-auto mb-4">Vos dons permettent de poursuivre nos actions d'éducation, de sport et de protection environnementale à Manambato-Vavony.</p>
                 <a href="donate.html" class="btn btn-light text-primary fw-bold py-3 px-5 rounded-pill">
                     Faire un don
                     <i class="fa fa-arrow-right ms-2"></i>
@@ -201,27 +278,35 @@
     <!-- Call to Action Don End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-6 col-md-6">
-                    <h5 class="text-light mb-4">Association MAVANA</h5>
-                    <p>Agir pour l'éducation, le sport et l'environnement à Manambato-Vavony, Madagascar.</p>
+                <!-- Colonne 1 : MAVANA -->
+                <div class="col-lg-4 col-md-6">
+                    <h1 class="fw-bold text-primary mb-4">MAVANA</h1>
+                    <p>Ensemble pour l'éducation, le sport et l'avenir des enfants à Madagascar.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+
+                <!-- Colonne 2 : Coordonnées -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-light mb-4">Coordonnées</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i><strong>Siège :</strong> 48 bis rue MANES, 97438 Sainte-Marie, La Réunion (France)</p>
+                    <p><i class="fa fa-globe me-3"></i><strong>Zone d'intervention :</strong> Manambato-Vavony, Madagascar</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+262 693 10 58 36</p>
+                    <p><i class="fa fa-envelope me-3"></i>contact@association-mavana.org</p>
+                </div>
+
+                <!-- Colonne 3 : Navigation -->
+                <div class="col-lg-4 col-md-6">
                     <h5 class="text-light mb-4">Navigation</h5>
                     <a class="btn btn-link" href="index.html">Accueil</a>
                     <a class="btn btn-link" href="about.html">À propos</a>
                     <a class="btn btn-link" href="evenements.html">Nos actions</a>
-                    <a class="btn btn-link" href="donate.html">Faire un don</a>
+                    <a class="btn btn-link" href="donate.html">Adhésion & Dons</a>
                     <a class="btn btn-link" href="contact.html">Contact</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Transparence</h5>
-                    <p class="small">Association Loi 1901. Vos dons ouvrent droit à une réduction d'impôt de 66 % en France.</p>
                 </div>
             </div>
         </div>
@@ -250,34 +335,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        // Script de partage d'action
-        const shareBtn = document.getElementById('shareEventBtn');
-        const shareStatus = document.getElementById('shareEventStatus');
-        
-        if (shareBtn) {
-            shareBtn.addEventListener('click', async () => {
-                const shareData = {
-                    title: "Raid Solidaire - MAVANA",
-                    text: "Découvrez les actions de l'Association MAVANA pour Manambato-Vavony à Madagascar !",
-                    url: window.location.href
-                };
-
-                if (navigator.share) {
-                    try {
-                        await navigator.share(shareData);
-                        if (shareStatus) shareStatus.innerText = "Partagé !";
-                    } catch (err) {
-                        console.log("Erreur de partage:", err);
-                    }
-                } else {
-                    navigator.clipboard.writeText(shareData.url).then(() => {
-                        if (shareStatus) shareStatus.innerText = "Lien copié dans le presse-papier !";
-                        setTimeout(() => { if (shareStatus) shareStatus.innerText = ""; }, 3000);
-                    });
-                }
-            });
-        }
-    </script>
 </body>
 </html>
