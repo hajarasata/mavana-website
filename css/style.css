@@ -1,18 +1,26 @@
 /* VARIABLES CHARTE GRAPHIQUE */
 :root {
-    --primary: #307055;        /* Vert MAVANA */
-    --secondary: #8a6842;      /* Marron */
-    --light: #FFF8DD;          /* Crème */
-    --dark: #152e22;           /* Vert foncé */
-    --grey: #F4F4F2;        /* Fond gris */
+    --primary: #307055;
+    --secondary: #8a6842;
+    --light: #FFF8DD;
+    --dark: #152e22;
+    --grey: #F4F4F2;
+    --white: #FFFFFF;
 
-    --bs-primary: var(--primary);
-    --bs-secondary: var(--secondary);
-    --bs-light: var(--light);
-    --bs-dark: var(--dark);
-    --bs-grey: var(--grey)
+    --bs-primary: var(--primary) !important;
+    --bs-secondary: var(--secondary) !important;
+    --bs-light: var(--light) !important;
+    --bs-dark: var(--dark) !important;
+    --bs-grey: var(--grey) !important;
 
+    --bs-blue: #144178 !important;
+    --bs-info: #ffb0d2 !important;
 }
+
+/* Classes pour les bordures */
+.border-blue { border-color: var(--bs-blue) !important; }
+.border-info { border-color: var(--bs-info) !important; }
+.border-primary { border-color: var(--bs-primary) !important; }
 
 /* --- Typographie Globale --- */
 body {
@@ -31,14 +39,18 @@ h1, h2, h3, h4, h5, h6,
 }
 
 p, .text-muted {
-    color: var(--secondary) !important;
+    color: var(--grey) !important;
 }
 
 /* --- Helper Classes HTML --- */
-.bg-mavana-cream { background-color: var(--light) !important; }
-.bg-mavana-grey { background-color: var(--gray-bg) !important; }
-.text-mavana-primary { color: var(--primary) !important; }
-.text-mavana-accent { color: var(--secondary) !important; }
+.bg-light { background-color: var(--light) !important; }
+.bg-grey { background-color: var(--grey) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-light { color: var(--light) !important; }
+.text-dark { color: var(--dark) !important; }
 
 /* Boutons MAVANA */
 .btn-primary,
@@ -47,6 +59,9 @@ p, .text-muted {
     border-color: var(--primary) !important;
     color: var(--light) !important;
     border-radius: 30px;
+    padding: 10px 24px !important;
+    width: auto !important;
+    white-space: nowrap !important;
     transition: all 0.3s ease;
 }
 
@@ -68,7 +83,7 @@ p, .text-muted {
     z-index: 1030 !important;
     visibility: visible !important;
     opacity: 1 !important;
-    background-color: var(--dark) !important; /* Vert très foncé MAVANA */
+    background-color: var(--dark) !important;
 }
 
 /* Liens du menu */
@@ -82,7 +97,7 @@ p, .text-muted {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--light) !important; /* Couleur claire au survol */
+    color: var(--light) !important;
     opacity: 1;
 }
 
@@ -90,7 +105,7 @@ p, .text-muted {
 .navbar .btn-mavana {
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
-    color: #FFFFFF !important;
+    color: var(--light) !important;
     border-radius: 30px;
     font-weight: 600;
 }
@@ -107,8 +122,8 @@ p, .text-muted {
         background: var(--dark);
         padding: 15px;
     }
-
 }
+
 /* Alignement et dimension du logo image dans la navbar */
 .navbar-brand {
     display: flex !important;
@@ -141,7 +156,6 @@ p, .text-muted {
     pointer-events: none !important;
 }
 
-
 .carousel-caption {
     top: 0; left: 0; right: 0; bottom: 0;
     display: flex;
@@ -160,23 +174,15 @@ p, .text-muted {
     color: #FFFFFF !important;
 }
 
-.page-header {
-    padding-top: 12rem;
-    padding-bottom: 6rem;
-    background: linear-gradient(rgba(18, 41, 30, 0.75), rgba(18, 41, 30, 0.75)), url(../img/event.png) center center no-repeat;
-    background-size: cover;
-}
-
-
 .footer,
 .container-fluid.footer {
     background-color: var(--dark) !important;
-    color: var(--secondary) !important;
+    color: var(--primary) !important;
 }
 
 /* Titres du footer */
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {
-    color: var(--secondary) !important; /* Crème */
+    color: var(--primary) !important;
 }
 
 /* Textes et liens dans le footer */
@@ -190,39 +196,41 @@ p, .text-muted {
 
 .footer .btn.btn-link:hover,
 .footer a:hover {
-    color: var(--secondary) !important; /* Ocre au survol */
+    color: var(--secondary) !important;
 }
 
 .footer .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
-    color: var(--light) !important;
+    color: var(--grey) !important;
 }
 
 /* 1. Bannière d'appel au don */
 .bg-primary, 
 .container-fluid.bg-primary,
 .call-to-action {
-    background-color: var(--primary) !important; /* Vert MAVANA */
+    background-color: var(--primary) !important;
 }
 
 /* 2. "Comment MAVANA fait la différence" */
 .text-mavana-white,
 .section-title h1,
 .section-title h2 {
-    color: var(--primary) !important;
+    color: var(--white) !important;
 }
 
 /* Badge au-dessus des titres ("Nos engagements", etc.) */
 .badge-mavana,
 .section-title span,
-.bg-mavana-cream {
+.bg-light {
     background-color: var(--light) !important;
-    color: var(--primary) !important; /* Vert MAVANA au lieu de l'ocre */
+    color: var(--primary) !important;
     font-weight: 600;
 }
 
-/* 3. Bannières de haut de page (Remettre la transparence sombre et titre blanc) */
+/* 3. Bannières de haut de page */
 .page-header {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
     background: linear-gradient(rgba(18, 41, 30, 0.65), rgba(18, 41, 30, 0.65)), url(../img/event.png) center center no-repeat !important;
     background-size: cover !important;
 }
@@ -238,16 +246,15 @@ p, .text-muted {
     position: sticky !important;
     top: 0 !important;
     z-index: 1020 !important;
-    background-color: var(--dark) !important; /* Vert foncé au défilement */
+    background-color: var(--dark) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-
 }
 
 .service-icon i,
 .icon-box i,
 .causes-icon i {
     font-size: 32px !important;
-    color: var(--primary) !important; /* Forcer le vert MAVANA */
+    color: var(--primary) !important;
     line-height: 1 !important;
     margin: 0 !important;
 }
@@ -271,12 +278,10 @@ p, .text-muted {
 .footer .btn-square:hover,
 .footer a.btn-social:hover {
     background-color: var(--secondary) !important;
-    border-color: var(secondary) !important;
+    border-color: var(--secondary) !important;
 }
 
 /* CORRECTION CENTRAGE PARFAIT DES ICÔNES DANS LES CERCLES */
-
-/* Centrage parfait des icônes dans les cercles */
 .btn-square,
 .btn-sm-square,
 .btn-lg-square {
@@ -293,10 +298,3 @@ p, .text-muted {
     line-height: 1 !important;
     display: block !important;
 }
-
-/* Surcharge globale des couleurs Bootstrap */
-.text-primary { color: var(--primary) !important; }
-.text-secondary { color: var(--secondary) !important; }
-.text-dark { color: var(--dark) !important; }
-.bg-primary { background-color: var(--primary) !important; }
-.bg-secondary { background-color: var(--secondary) !important; }
