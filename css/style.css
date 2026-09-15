@@ -300,3 +300,14 @@ p, .text-secondary, .text-muted {
 .text-dark { color: var(--dark) !important; }
 .bg-primary { background-color: var(--primary) !important; }
 .bg-secondary { background-color: var(--secondary) !important; }
+
+/* Force le texte clair sur les fonds marron */
+.bg-secondary,
+.btn-secondary {
+    color: var(--light) !important;
+}
+
+.bg-secondary *,
+.btn-secondary * {
+    color: var(--light) !important;
+}
