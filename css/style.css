@@ -414,3 +414,9 @@ p, .text-secondary, .text-muted {
     z-index: 99;
     border-radius: 50% !important;
 }
+
+#spinner {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
