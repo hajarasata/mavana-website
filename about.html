@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <title>ChariTeam - Free Nonprofit Website Template</title>
+    <title>À propos - Association MAVANA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="MAVANA, à propos, bureau, association Madagascar, Manambato-Vavony, équipe" name="keywords">
+    <meta content="Découvrez l'histoire, la mission et l'équipe de l'Association MAVANA engagée pour Manambato-Vavony à Madagascar." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -29,6 +29,33 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Styles sur mesure pour la charte MAVANA & la lisibilité -->
+    <style>
+        :root {
+            --primary-color: #307055;
+            --accent-color: #AF5F02;
+            --bg-light: #FFF8DD;
+            --bg-neutral: #F4F4F2;
+        }
+        .bg-mavana-cream { background-color: var(--bg-light) !important; }
+        .bg-mavana-grey { background-color: var(--bg-neutral) !important; }
+        .text-mavana-primary { color: var(--primary-color) !important; }
+        .text-mavana-accent { color: var(--accent-color) !important; }
+        .btn-mavana {
+            background-color: var(--primary-color);
+            color: #ffffff !important;
+            border-radius: 30px;
+        }
+        .btn-mavana:hover {
+            background-color: var(--accent-color);
+        }
+        .pdf-link {
+            color: var(--accent-color) !important;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,95 +65,80 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
-        <div class="col-lg-6 px-5 text-start">
-            <small><i class="fa fa-map-marker-alt me-2"></i>Intervention : Manambato-Vavony, Madagascar (Siège : Sainte-Marie, La Réunion)</small>
-            <small class="ms-4"><i class="fa fa-phone me-2"></i><a class="text-white-50" href="tel:+262693105836">+262 693 10 58 36</a></small>
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>Intervention : Manambato-Vavony, Madagascar (Siège : Sainte-Marie, La Réunion)</small>
+                <small class="ms-4"><i class="fa fa-phone me-2"></i><a class="text-white-50" href="tel:+262693105836">+262 693 10 58 36</a></small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Suivez-nous :</small>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-        <div class="col-lg-6 px-5 text-end">
-            <small>Plus d'infos sur l'association :</small>
-            <a class="text-white-50 ms-3" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <img src="img/logo-mavana.png" alt="Logo Association MAVANA" style="height: 50px;">
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                <a href="about.html" class="nav-item nav-link">À propos</a>
-                <a href="evenements.html" class="nav-item nav-link">Nos actions</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <img src="img/logo-mavana.png" alt="Logo Association MAVANA" style="height: 50px;">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Accueil</a>
+                    <a href="about.html" class="nav-item nav-link active">À propos</a>
+                    <a href="evenements.html" class="nav-item nav-link">Événements & Actualités</a>
+                    <a href="donate.html" class="nav-item nav-link">Donner</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-light py-2 px-3 rounded-pill" href="login.php">
+                        Espace Adhérent
+                        <div class="d-inline-flex btn-sm-square bg-white text-mavana-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="d-none d-lg-flex ms-2">
-                <a class="btn btn-outline-primary py-2 px-3" href="donate.html">
-                    Faire un don
-                    <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                        <i class="fa fa-arrow-right"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">About Us</h1>
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s" style="background: linear-gradient(rgba(15, 66, 41, 0.65), rgba(15, 66, 41, 0.65)), url('img/event.png') center center no-repeat; background-size: cover;">
+        <div class="container text-center py-5">
+            <h1 class="display-4 text-white animated slideInDown mb-4">À propos de nous</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">About Us</li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Accueil</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">À propos</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
-
-    <!-- About Start -->
+    <!-- About Start (Bloc avec les 2 photos superposées) -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100 pt-5 pe-5" src="img/about-1.jpg" alt="" style="object-fit: cover;">
-                        <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
+                        <img class="position-absolute w-100 h-100 pt-5 pe-5 rounded" src="img/presentation-1.png" alt="Enfants MAVANA" style="object-fit: cover;">
+                        <img class="position-absolute top-0 end-0 bg-white p-2 rounded shadow" src="img/presentation-2.png" alt="Activités MAVANA" style="width: 200px; height: 200px; object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100">
-                        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                        <h1 class="display-6 mb-5">We Help People In Need Around The World</h1>
-                        <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                            <p class="text-dark mb-2">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                            <span class="text-primary">Jhon Doe, Founder</span>
+                        <div class="d-inline-block rounded-pill bg-mavana-cream text-mavana-accent py-1 px-3 mb-3 fw-bold">Qui sommes-nous ?</div>
+                        <h1 class="display-6 mb-4 text-dark">MAVANA : Un Engagement Concret pour Manambato-Vavony</h1>
+                        <div class="bg-mavana-grey border-start border-5 border-success p-4 mb-4 rounded">
+                            <p class="text-dark mb-0">L'Association Manambato Vavony MAVANA est une association loi 1901 dédiée à l'éducation, à la pratique sportive et à la préservation de l'environnement dans le village de Manambato-Vavony à Madagascar.</p>
                         </div>
-                        <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <a class="btn btn-primary py-2 px-3 me-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
-                        <a class="btn btn-outline-primary py-2 px-3" href="">
-                            Contact Us
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+                        <p class="text-secondary mb-4">Nous mettons en œuvre des projets de terrain durables (infrastructures sportives, distribution de matériel, programmes d'éco-citoyenneté) pour offrir aux jeunes de la région les moyens de s'épanouir dans un environnement préservé.</p>
+                        <a class="btn btn-mavana py-3 px-5 me-3" href="contact.html">Nous contacter <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -134,162 +146,147 @@
     </div>
     <!-- About End -->
 
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <!-- Features / 3 Cadres Start -->
+    <div class="container-xxl py-5 bg-mavana-grey">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-                <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="d-inline-block rounded-pill bg-mavana-cream text-mavana-accent py-1 px-3 mb-3 fw-bold">Nos Piliers</div>
+                <h1 class="display-6 mb-4 text-dark">Nos Domaines d'Action</h1>
             </div>
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                        <h4 class="mb-3">Child Education</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+                    <div class="bg-white text-center h-100 p-4 p-xl-5 rounded shadow-sm border-top border-4 border-success">
+                        <div class="btn-square bg-mavana-cream rounded-circle mx-auto mb-4" style="width: 70px; height: 70px;">
+                            <i class="fa fa-child fa-2x text-mavana-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-dark">Éducation & Sport</h4>
+                        <p class="text-secondary mb-4">Développement d'activités sportives (course, kayak, vélo) et soutien scolaire aux jeunes du village.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                        <h4 class="mb-3">Medical Treatment</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+                    <div class="bg-white text-center h-100 p-4 p-xl-5 rounded shadow-sm border-top border-4 border-warning">
+                        <div class="btn-square bg-mavana-cream rounded-circle mx-auto mb-4" style="width: 70px; height: 70px;">
+                            <i class="fa fa-leaf fa-2x text-mavana-accent"></i>
+                        </div>
+                        <h4 class="mb-3 text-dark">Environnement & Reboisement</h4>
+                        <p class="text-secondary mb-4">Sensibilisation à l'écologie, gestion des déchets et actions concrètes de reboisement sur place.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                        <h4 class="mb-3">Pure Drinking Water</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+                    <div class="bg-white text-center h-100 p-4 p-xl-5 rounded shadow-sm border-top border-4 border-success">
+                        <div class="btn-square bg-mavana-cream rounded-circle mx-auto mb-4" style="width: 70px; height: 70px;">
+                            <i class="fa fa-hands-helping fa-2x text-mavana-primary"></i>
+                        </div>
+                        <h4 class="mb-3 text-dark">Solidarité & Communauté</h4>
+                        <p class="text-secondary mb-4">Projets de développement local menés main dans la main avec la population et les acteurs locaux.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Features End -->
 
-
-    <!-- Team Start -->
+<!-- Team / Présentation de l'Équipe Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Team Members</div>
-                <h1 class="display-6 mb-5">Let's Meet With Our Ordinary Soldiers</h1>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="d-inline-block rounded-pill bg-mavana-cream text-mavana-accent py-1 px-3 mb-3 fw-bold">L'Équipe MAVANA</div>
+                <h1 class="display-6 mb-4 text-dark">Qui sommes-nous ?</h1>
             </div>
-            <div class="row g-4">
+
+            <!-- NIVEAU 1 : Le Bureau (4 membres) -->
+            <div class="text-center mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="text-mavana-primary border-bottom border-2 border-success d-inline-block pb-2">Membres du Bureau</h3>
+            </div>
+            <div class="row g-4 justify-content-center mb-5">
+                <!-- Membre 1 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+                    <div class="team-item bg-mavana-grey rounded overflow-hidden text-center p-4 shadow-sm h-100">
+                        <img class="img-fluid rounded-circle mb-3" src="img/team-1.jpg" alt="Président(e)" style="width: 130px; height: 130px; object-fit: cover;">
+                        <h5 class="mb-1 text-dark">Hajan'Andrianampoinina RAZAFINDRASATA</h5>
+                        <span class="text-mavana-primary fw-bold">Président</span>
                     </div>
                 </div>
+                <!-- Membre 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item bg-mavana-grey rounded overflow-hidden text-center p-4 shadow-sm h-100">
+                        <img class="img-fluid rounded-circle mb-3" src="img/team-2.jpg" alt="Vice-Président(e)" style="width: 130px; height: 130px; object-fit: cover;">
+                        <h5 class="mb-1 text-dark">Andrianasolo Haja RAMANGA</h5>
+                        <span class="text-mavana-primary fw-bold">Vice-Président</span>
+                    </div>
+                </div>
+                <!-- Membre 3 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+                    <div class="team-item bg-mavana-grey rounded overflow-hidden text-center p-4 shadow-sm h-100">
+                        <img class="img-fluid rounded-circle mb-3" src="img/team-3.jpg" alt="Trésorier(e)" style="width: 130px; height: 130px; object-fit: cover;">
+                        <h5 class="mb-1 text-dark">Lalamihajasoa RAMANGA</h5>
+                        <span class="text-mavana-primary fw-bold">Trésorière</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+                <!-- Membre 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item bg-mavana-grey rounded overflow-hidden text-center p-4 shadow-sm h-100">
+                        <img class="img-fluid rounded-circle mb-3" src="img/team-4.jpg" alt="Secrétaire" style="width: 130px; height: 130px; object-fit: cover;">
+                        <h5 class="mb-1 text-dark">Andriamihaja RAZAFINDRASATA</h5>
+                        <span class="text-mavana-primary fw-bold">Secrétaire</span>
                     </div>
                 </div>
             </div>
+
+            <!-- NIVEAU 2 : Pôle Communication (2 membres) -->
+            <div class="text-center mb-4 pt-3 wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="text-mavana-accent border-bottom border-2 border-warning d-inline-block pb-2">Pôle Communication & Web</h3>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Toi -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-mavana-grey rounded overflow-hidden text-center p-4 shadow-sm h-100 border-start border-4 border-warning">
+                        <img class="img-fluid rounded-circle mb-3" src="img/team-5.jpg" alt="Chargée de Communication" style="width: 130px; height: 130px; object-fit: cover;">
+                        <h5 class="mb-1 text-dark">Irina Mihaja RAMANGA</h5>
+                        <span class="text-mavana-accent fw-bold">Chargée de Communication & Web</span>
+                    </div>
+                </div>
+                <!-- Ton copain -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-item bg-mavana-grey rounded overflow-hidden text-center p-4 shadow-sm h-100 border-start border-4 border-warning">
+                        <img class="img-fluid rounded-circle mb-3" src="img/team-6.jpg" alt="Chargé de Communication" style="width: 130px; height: 130px; object-fit: cover;">
+                        <h5 class="mb-1 text-dark">Clément Moreau</h5>
+                        <span class="text-mavana-accent fw-bold">Chargé de Communication & Médias</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Team End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h1 class="fw-bold text-primary mb-4">Chari<span class="text-white">Team</span></h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+                <div class="col-lg-4 col-md-6">
+                    <h1 class="fw-bold text-white mb-4">MAVANA</h1>
+                    <p>Ensemble pour l'éducation, le sport et l'avenir des enfants à Manambato-Vavony.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square me-0" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square me-0 text-white" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-light mb-4">Coordonnées</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i><strong>Siège :</strong> 48 bis rue MANES, 97438 Sainte-Marie, La Réunion (France)</p>
+                    <p><i class="fa fa-globe me-3"></i><strong>Zone d'intervention :</strong> Manambato-Vavony, Madagascar</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+262 693 10 58 36</p>
+                    <p><i class="fa fa-envelope me-3"></i>contact@association-mavana.org</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-light mb-4">Navigation</h5>
+                    <a class="btn btn-link" href="index.html">Accueil</a>
+                    <a class="btn btn-link" href="about.html">À propos</a>
+                    <a class="btn btn-link" href="evenements.html">Événements & Actualités</a>
+                    <a class="btn btn-link" href="donate.html">Espace Adhérent</a>
+                    <a class="btn btn-link" href="contact.html">Contact</a>
                 </div>
             </div>
         </div>
@@ -297,11 +294,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        &copy; <a href="index.html">Association MAVANA</a>, Tous droits réservés.
                     </div>
                 </div>
             </div>
@@ -309,10 +302,8 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-mavana btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -321,10 +312,8 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/parallax/parallax.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
