@@ -6,12 +6,12 @@
     --dark: #152e22;           /* Vert foncé */
     --gray-bg: #F4F4F2;        /* Fond gris */
     --text-dark: #152e22;      /* Texte principal */
-}
 
-/* Surcharge directe des variables Bootstrap */
+    /* ECRASEMENT DU BOOTSTRAP SUR LES COULEURS */
     --bs-primary: var(--primary) !important;
     --bs-secondary: var(--secondary) !important;
     --bs-dark: var(--dark) !important;
+    --bs-light: var(--light) !important;
 }
 
 /* --- Typographie Globale --- */
@@ -293,3 +293,10 @@ p, .text-secondary, .text-muted {
     line-height: 1 !important;
     display: block !important;
 }
+
+/* surcharge du bootstrap */
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-dark { color: var(--dark) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
