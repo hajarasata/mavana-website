@@ -294,20 +294,14 @@ p, .text-secondary, .text-muted {
     display: block !important;
 }
 
-/* surcharge du bootstrap */
+/* Surcharge globale des couleurs Bootstrap */
 .text-primary { color: var(--primary) !important; }
 .text-secondary { color: var(--secondary) !important; }
 .text-dark { color: var(--dark) !important; }
 .bg-primary { background-color: var(--primary) !important; }
 .bg-secondary { background-color: var(--secondary) !important; }
 
-/* Force le texte clair sur les fonds marron */
-.bg-secondary,
+/* Couleur par défaut des boutons marron */
 .btn-secondary {
-    color: var(--light) !important;
-}
-
-.bg-secondary *,
-.btn-secondary * {
     color: var(--light) !important;
 }
