@@ -171,12 +171,12 @@ p, .text-secondary, .text-muted {
 .footer,
 .container-fluid.footer {
     background-color: var(--dark) !important;
-    color: var(--light) !important;
+    color: var(--secondary) !important;
 }
 
 /* Titres du footer */
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {
-    color: var(--light) !important; /* Crème */
+    color: var(--secondary) !important; /* Crème */
 }
 
 /* Textes et liens dans le footer */
@@ -270,8 +270,8 @@ p, .text-secondary, .text-muted {
 
 .footer .btn-square:hover,
 .footer a.btn-social:hover {
-    background-color: #AF5F02 !important;
-    border-color: #AF5F02 !important;
+    background-color: var(--secondary) !important;
+    border-color: var(secondary) !important;
 }
 
 /* CORRECTION CENTRAGE PARFAIT DES ICÔNES DANS LES CERCLES */
