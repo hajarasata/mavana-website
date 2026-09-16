@@ -6,6 +6,8 @@
     --dark: #152e22;
     --grey: #F4F4F2;
     --white: #FFFFFF;
+    --blue: #144178
+    --info: #ffb0d2
 
     --bs-primary: var(--primary) !important;
     --bs-secondary: var(--secondary) !important;
@@ -13,8 +15,8 @@
     --bs-dark: var(--dark) !important;
     --bs-grey: var(--grey) !important;
 
-    --bs-blue: #144178 !important;
-    --bs-info: #ffb0d2 !important;
+    --bs-blue: var(--blue) !important;
+    --bs-info: var(--info) !important;
 }
 
 /* Classes pour les bordures */
@@ -47,10 +49,14 @@ h1, h2, h3, h4, h5, h6,
 .bg-grey { background-color: var(--grey) !important; }
 .bg-primary { background-color: var(--primary) !important; }
 .bg-secondary { background-color: var(--secondary) !important; }
+.bg-info { background-color: var(--info) !important; }
+.bg-blue { background-color: var(--blue) !important; }
 .text-primary { color: var(--primary) !important; }
 .text-secondary { color: var(--secondary) !important; }
 .text-light { color: var(--light) !important; }
 .text-dark { color: var(--dark) !important; }
+.text-info { color: var(--dark) !important; }
+.text-blue { color: var(--dark) !important; }
 
 /* Boutons MAVANA */
 .btn-primary,
@@ -62,6 +68,7 @@ h1, h2, h3, h4, h5, h6,
     padding: 10px 24px !important;
     width: auto !important;
     white-space: nowrap !important;
+    overflow: hidden !important;
     transition: all 0.3s ease;
 }
 
@@ -70,6 +77,12 @@ h1, h2, h3, h4, h5, h6,
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
     color: var(--light) !important;
+}
+
+.btn-primary:hover .btn-sm-square,
+.btn-mavana:hover .btn-sm-square {
+    background-color: var(--light) !important;
+    color: var(--secondary) !important; /* L'icône passe en texte marron */
 }
 
 /* NAVBAR / BARRE DE NAVIGATION */
