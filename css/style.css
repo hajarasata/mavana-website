@@ -55,8 +55,8 @@ h1, h2, h3, h4, h5, h6,
 .text-secondary { color: var(--secondary) !important; }
 .text-light { color: var(--light) !important; }
 .text-dark { color: var(--dark) !important; }
-.text-info { color: var(--dark) !important; }
-.text-blue { color: var(--dark) !important; }
+.text-info { color: var(--info) !important; }
+.text-blue { color: var(--blue) !important; }
 
 /* Boutons MAVANA */
 .btn-primary,
