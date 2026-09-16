@@ -309,3 +309,15 @@ h1, h2, h3, h4, h5, h6,
     line-height: 1 !important;
     display: block !important;
 }
+
+/* --- FORCER LA COULEUR MEMBRES INFO --- */
+
+h3.text-info,
+span.text-info,
+.text-info {
+    color: var(--info) !important;
+}
+
+.border-info {
+    border-color: var(--info) !important;
+}
