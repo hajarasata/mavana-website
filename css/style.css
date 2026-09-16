@@ -310,8 +310,9 @@ h1, h2, h3, h4, h5, h6,
     display: block !important;
 }
 
-/* --- FORCER LA COULEUR MEMBRES INFO --- */
+/* --- FORCER LES COULEURS --- */
 
+/* --- membre info (rose) --- */
 h3.text-info,
 span.text-info,
 .text-info {
@@ -320,4 +321,14 @@ span.text-info,
 
 .border-info {
     border-color: var(--info) !important;
+}
+
+/* --- BOUTON INSTA ACTU --- */
+.btn-blue,
+a.btn-blue,
+button.btn-blue {
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: var(--white) !important;
+    transition: all 0.3s ease;
 }
