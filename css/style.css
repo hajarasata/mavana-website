@@ -6,31 +6,26 @@
     --dark: #152e22;
     --grey: #F4F4F2;
     --white: #FFFFFF;
-    --blue: #144178
-    --info: #ffb0d2
+    --blue: #144178;
+    --info: #ffb0d2;
 
     --bs-primary: var(--primary) !important;
     --bs-secondary: var(--secondary) !important;
     --bs-light: var(--light) !important;
     --bs-dark: var(--dark) !important;
     --bs-grey: var(--grey) !important;
-
     --bs-blue: var(--blue) !important;
     --bs-info: var(--info) !important;
 }
 
-/* Classes pour les bordures */
-.border-blue { border-color: var(--bs-blue) !important; }
-.border-info { border-color: var(--bs-info) !important; }
-.border-primary { border-color: var(--bs-primary) !important; }
 
-/* --- Typographie Globale --- */
+/* --- TYPO GLOBALE --- */
 body, p{
     font-family: 'Inter', sans-serif;
     color: var(--dark);
 }
 
-/* Titres style (Fredoka) */
+/* style (Fredoka) */
 h1, h2, h3, h4, h5, h6, 
 .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
     font-family: 'Fredoka', 'Saira', sans-serif !important;
@@ -44,13 +39,17 @@ h1, h2, h3, h4, h5, h6,
     color: #6c757d !important;
 }
 
-/* --- Helper Classes HTML --- */
+/* ========== HELPER CLASSES HTLM ========== */
+
+/* --- BACKBROUND --- */
 .bg-light { background-color: var(--light) !important; }
 .bg-grey { background-color: var(--grey) !important; }
 .bg-primary { background-color: var(--primary) !important; }
 .bg-secondary { background-color: var(--secondary) !important; }
 .bg-info { background-color: var(--info) !important; }
 .bg-blue { background-color: var(--blue) !important; }
+
+/* --- TEXTES --- */
 .text-primary { color: var(--primary) !important; }
 .text-secondary { color: var(--secondary) !important; }
 .text-light { color: var(--light) !important; }
@@ -58,7 +57,13 @@ h1, h2, h3, h4, h5, h6,
 .text-info { color: var(--info) !important; }
 .text-blue { color: var(--blue) !important; }
 
-/* Boutons MAVANA */
+/* --- BORDURES --- */
+.border-blue { border-color: var(--blue) !important; }
+.border-info { border-color: var(--info) !important; }
+.border-primary { border-color: var(--primary) !important; }
+.border-secondary { border-color: var(--secondary) !important; }
+
+/* BOUTON MAVANA */
 .btn-primary,
 .btn-mavana {
     background-color: var(--primary) !important;
@@ -85,7 +90,7 @@ h1, h2, h3, h4, h5, h6,
     color: var(--secondary) !important; /* L'icône passe en texte marron */
 }
 
-/* NAVBAR / BARRE DE NAVIGATION */
+/* NAVBAR */
 .fixed-top,
 .navbar,
 .sticky-top {
@@ -99,7 +104,7 @@ h1, h2, h3, h4, h5, h6,
     background-color: var(--dark) !important;
 }
 
-/* Liens du menu */
+/* menu */
 .navbar-dark .navbar-nav .nav-link {
     color: #FFFFFF !important;
     font-weight: 500;
@@ -114,7 +119,7 @@ h1, h2, h3, h4, h5, h6,
     opacity: 1;
 }
 
-/* Bouton Espace Adhérent dans le menu */
+/* Bouton Espace Adhérent */
 .navbar .btn-mavana {
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
@@ -137,7 +142,7 @@ h1, h2, h3, h4, h5, h6,
     }
 }
 
-/* Alignement et dimension du logo image dans la navbar */
+/* LOGO IMG NAV BAR */
 .navbar-brand {
     display: flex !important;
     align-items: center !important;
@@ -222,13 +227,6 @@ h1, h2, h3, h4, h5, h6,
 .container-fluid.bg-primary,
 .call-to-action {
     background-color: var(--primary) !important;
-}
-
-/* 2. "Comment MAVANA fait la différence" */
-.text-mavana-white,
-.section-title h1,
-.section-title h2 {
-    color: var(--white) !important;
 }
 
 /* Badge au-dessus des titres ("Nos engagements", etc.) */
