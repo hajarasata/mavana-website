@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
 
+	<!-- Police de titre -->
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+	
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -45,45 +48,29 @@
     <!-- Spinner End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
-			<div class="col-lg-6 px-5 text-start">
-				<small><i class="fa fa-map-marker-alt me-2"></i>Intervention : Manambato-Vavony, Madagascar (Siège : Sainte-Marie, La Réunion)</small>
-				<small class="ms-4"><i class="fa fa-phone me-2"></i><a class="text-white-50" href="tel:+262693105836">+262 693 10 58 36</a></small>
-			</div>
-            <div class="col-lg-6 px-5 text-end">
-                <small>Plus d'infos sur l'association :</small>
-                <a class="text-white-50 ms-3" href="https://www.instagram.com/mavana.asso" target="_blank"><i class="fab fa-instagram"></i></a>
+<!-- Navbar Start -->
+<div class="container-fluid fixed-top px-0">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center ms-4 ms-lg-0">
+    <img src="img/favicon.ico" alt="Logo MAVANA" class="logo-img me-2">
+    <h1 class="fw-bold m-0">MAVANA</h1>
+</a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Accueil</a>
+                <a href="about.html" class="nav-item nav-link">À propos</a>
+                <a href="evenements.html" class="nav-item nav-link">Evenements & actus</a>
+                <a href="donate.html" class="nav-item nav-link">Don & Adhésion </a>
+                <a href="contact.html" class="nav-item nav-link" active>Contact</a>
             </div>
+            <a href="login.php" class="btn btn-mavana px-3 d-none d-lg-block">Espace Adhérent</a>
         </div>
-
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <img src="img/logo-mavana.png" alt="Logo Association MAVANA" style="height: 50px;"> <!-- Ajustez la hauteur (height) selon la taille de votre logo et le design souhaité -->
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                    <a href="#section-apropos" class="nav-item nav-link">À propos</a>
-                    <a href="#section-event" class="nav-item nav-link">Nos actions</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-outline-primary py-2 px-3" href="donate.html">
-                        Faire un don
-                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
+    </nav>
+</div>
+<!-- Navbar End -->
 
 
     <!-- Page Header Start -->
@@ -92,7 +79,7 @@
             <h1 class="display-4 text-white animated slideInDown mb-4">Contactez-nous</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Acceuil</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Accueil</a></li>
                     <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li>
                 </ol>
             </nav>
@@ -106,39 +93,39 @@
 		<div class="container">
 			<div class="row g-5">
 				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-					<div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Contact</div>
-					<h1 class="display-6 mb-5">Si vous avez une question, veuillez nous contacter</h1>
+					<div class="d-inline-block rounded-pill bg-light text-secondary py-1 px-3 mb-3">Contact</div>
+					<h1 class="display-6 mb-5 text-secondary">Si vous avez une question, contactez-nous</h1>
 
-					<form>
+					<form action="https://formspree.io/f/xkjgwgql" method="POST">
 						<div class="row g-3">
 							<div class="col-md-6">
 								<div class="form-floating">
-									<input type="text" class="form-control" id="name" placeholder="Votre nom">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
 									<label for="name">Votre nom</label>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-floating">
-									<input type="email" class="form-control" id="email" placeholder="Votre email">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
 									<label for="email">Votre email</label>
 								</div>
 							</div>
 							<div class="col-12">
 								<div class="form-floating">
-									<input type="text" class="form-control" id="subject" placeholder="Sujet">
+									<input type="text" class="form-control" id="subject" subjet="name" placeholder="Sujet" required>
 									<label for="subject">Sujet</label>
 								</div>
 							</div>
 							<div class="col-12">
 								<div class="form-floating">
-									<textarea class="form-control" placeholder="Laissez un message ici" id="message" style="height: 100px"></textarea>
+									<textarea class="form-control" placeholder="Laissez un message ici" id="message" name="message" style="height: 150px"></textarea>
 									<label for="message">Message</label>
 								</div>
 							</div>
 							<div class="col-12">
-								<button class="btn btn-primary py-2 px-3 me-3">
+								<button class="btn btn-mavana py-2 px-3 me-3">
 									Envoyer le message
-									<div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+									<div class="d-inline-flex btn-sm-square bg-light text-primary rounded-circle ms-2">
 										<i class="fa fa-arrow-right"></i>
 									</div>
 								</button>
@@ -177,15 +164,14 @@
                     <p><i class="fa fa-map-marker-alt me-3"></i>Siège : 48 bis rue MANES, 97438 Sainte-Marie, La Réunion (France)</p>
                     <p><i class="fa fa-flag me-3"></i>Zone d'intervention : Manambato-Vavony, Madagascar</p>
                     <p><i class="fa fa-phone-alt me-3"></i><a href="tel:+262693105836">+262 693 10 58 36</a></p>
-                    <p><i class="fa fa-envelope me-3"></i>mavana.asso@outlook.fr</p>
+                    <p><i class="fa fa-envelope me-3"></i>bureau@association-mavana.org</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Accès rapide</h5>
                     <a class="btn btn-link" href="about.html">Qui sommes‑nous</a>
-                    <a class="btn btn-link" href="causes.html">Nos actions</a>
+                    <a class="btn btn-link" href="causes.html">Evenements & actus</a>
                     <a class="btn btn-link" href="contact.html">Contact</a>
                     <a class="btn btn-link" href="donate.html">Faire un don</a>
-                    <a class="btn btn-link" href="legal.html">Mentions légales</a> <!-- Créer une page mentions légales -->
                 </div>
                 
             </div>
@@ -218,7 +204,41 @@
     <script src="lib/parallax/parallax.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<script>
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // 1. Transformer les champs du formulaire en objet JSON
+    const formData = new FormData(contactForm);
+    const dataObject = Object.fromEntries(formData.entries());
+
+    try {
+      // 2. Envoyer en JSON strict à Formspree
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(dataObject)
+      });
+
+      if (response.ok) {
+        alert("Merci ! Votre message a bien été envoyé.");
+        contactForm.reset();
+      } else {
+        const data = await response.json();
+        alert("Erreur Formspree : " + (data.errors ? data.errors.map(err => err.message).join(", ") : "Problème d'envoi"));
+      }
+    } catch (error) {
+      alert("Erreur réseau ou blocage du navigateur.");
+    }
+  });
+}
+</script>
 </body>
 
 </html>

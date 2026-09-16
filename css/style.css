@@ -1,682 +1,351 @@
-/********** Template CSS **********/
-
+/* VARIABLES CHARTE GRAPHIQUE */
 :root {
-    --primary: #3D7E4D;      
-    --secondary: #FFF0E6;      
-    --light: #F8F8F9;
-    --dark: #001D23;
+    --primary: #307055;
+    --secondary: #8a6842;
+    --light: #FFF8DD;
+    --dark: #152e22;
+    --grey: #F4F4F2;
+    --white: #FFFFFF;
+    --blue: #144178;
+    --info: #ffb0d2;
 
-    /* --- AJOUTEZ CECI --- */
-    --bs-primary: #3D7E4D;
-}
-
-.back-to-top {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
-}
-
-
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
-}
-
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
+    --bs-primary: var(--primary) !important;
+    --bs-secondary: var(--secondary) !important;
+    --bs-light: var(--light) !important;
+    --bs-dark: var(--dark) !important;
+    --bs-grey: var(--grey) !important;
+    --bs-blue: var(--blue) !important;
+    --bs-info: var(--info) !important;
 }
 
 
-/*** Button ***/
-.btn {
-    font-weight: 500;
-    transition: .5s;
-}
-
-.btn.btn-primary,
-.btn.btn-outline-primary:hover {
-    color: #FFFFFF;
-}
-
-.btn.btn-primary:hover {
-    color: var(--primary);
-    background: transparent;
-}
-
-.btn-square {
-    width: 38px;
-    height: 38px;
-}
-
-.btn-sm-square {
-    width: 32px;
-    height: 32px;
-}
-
-.btn-lg-square {
-    width: 48px;
-    height: 48px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-}
-
-
-/*** Navbar ***/
-.fixed-top {
-    transition: .5s;
-}
-
-.top-bar {
-    height: 45px;
-    border-bottom: 1px solid rgba(255, 255, 255, .07);
-}
-
-.top-bar .text-start {
-    display: flex;
-    align-items: center;
-    min-width: 0;
-    white-space: nowrap;
-}
-
-.top-bar .text-start small:first-child {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.top-bar a[href^="tel:"] {
-    white-space: nowrap;
-}
-
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
-
-.navbar .navbar-nav .nav-link {
-    margin-right: 30px;
-    padding: 25px 0;
-    font-weight: 500;
-    outline: none;
-    transition: color .5s ease;
-}
-
-
-
-
-/* 1. Couleur par défaut en haut de page (navbar transparente) -> TEXTE NOIR */
-.navbar.fixed-top:not(.sticky-top) .navbar-nav .nav-link {
+/* --- TYPO GLOBALE --- */
+body, p{
+    font-family: 'Inter', sans-serif;
     color: var(--dark);
 }
 
-/* 2. Couleur par défaut après scroll (navbar noire) -> TEXTE BLANC */
-.navbar.fixed-top.sticky-top .navbar-nav .nav-link {
-    color: #FFFFFF;
+/* style (Fredoka) */
+h1, h2, h3, h4, h5, h6, 
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Fredoka', 'Saira', sans-serif !important;
+    color: var(--dark) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
 }
 
-/* 3. Couleur au survol et pour le lien actif -> TEXTE VERT (prioritaire) */
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary) !important;
+.text-muted {
+    color: #6c757d !important;
 }
 
-/* 4. Règles pour la vue mobile (menu hamburger) - Inchangé */
+/* ========== HELPER CLASSES HTLM ========== */
+
+/* --- BACKBROUND --- */
+.bg-light { background-color: var(--light) !important; }
+.bg-grey { background-color: var(--grey) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.bg-info { background-color: var(--info) !important; }
+.bg-blue { background-color: var(--blue) !important; }
+
+/* --- TEXTES --- */
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-light { color: var(--light) !important; }
+.text-dark { color: var(--dark) !important; }
+.text-info { color: var(--info) !important; }
+.text-blue { color: var(--blue) !important; }
+
+/* --- BORDURES --- */
+.border-blue { border-color: var(--blue) !important; }
+.border-info { border-color: var(--info) !important; }
+.border-primary { border-color: var(--primary) !important; }
+.border-secondary { border-color: var(--secondary) !important; }
+
+/* BOUTON MAVANA */
+.btn-primary,
+.btn-mavana {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--light) !important;
+    border-radius: 30px;
+    padding: 10px 24px !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-mavana:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: var(--light) !important;
+}
+
+.btn-primary:hover .btn-sm-square,
+.btn-mavana:hover .btn-sm-square {
+    background-color: var(--light) !important;
+    color: var(--secondary) !important; /* L'icône passe en texte marron */
+}
+
+/* NAVBAR */
+.fixed-top,
+.navbar,
+.sticky-top {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 1030 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: var(--dark) !important;
+}
+
+/* menu */
+.navbar-dark .navbar-nav .nav-link {
+    color: #FFFFFF !important;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 20px;
+    opacity: 0.95;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--light) !important;
+    opacity: 1;
+}
+
+/* Bouton Espace Adhérent */
+.navbar .btn-mavana {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: var(--light) !important;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.navbar .btn-mavana:hover {
+    background-color: var(--light) !important;
+    border-color: var(--light) !important;
+    color: var(--dark) !important; /* Texte vert foncé au survol */
+}
+
+/* Vue Mobile */
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav {
-        margin-top: 10px;
-        border-top: 1px solid rgba(0, 0, 0, .07);
+    .navbar-dark .navbar-nav {
         background: var(--dark);
-    }
-
-    /* Sur mobile, le fond est toujours noir, donc le texte doit être blanc */
-    .navbar .navbar-nav .nav-link {
-        padding: 10px 0;
-        color: #FFFFFF;
-    }
-
-    /* Sauf pour le lien actif qui doit rester vert */
-    .navbar .navbar-nav .nav-link.active {
-        color: var(--primary) !important;
+        padding: 15px;
     }
 }
 
-/* --- Fin de la section à modifier --- */
-
-/* 5. Règles pour le dropdown sur desktop */
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        visibility: hidden;
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-        transition: .5s;
-        opacity: 0;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        transform: rotateX(0deg);
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
+/* LOGO IMG NAV BAR */
+.navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
 }
 
-/* --- FIN navbar --- */
+.navbar-brand .logo-img {
+    height: 48px !important;
+    width: auto !important;
+    object-fit: contain;
+}
 
+.navbar-brand h1 {
+    color: var(--primary) !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    line-height: 1 !important;
+    margin: 0 !important;
+}
 
-/*** Header ***/
+/* Fin de la Nav Bar */
+
+#spinner,
+#spinner.show {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
 .carousel-caption {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(0, 29, 35, .8);
+    background: rgba(18, 41, 30, 0.70);
     z-index: 1;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 15%;
+.carousel-caption h1,
+.carousel-caption p,
+.page-header h1,
+.page-header p,
+.page-header .breadcrumb-item {
+    color: #FFFFFF !important;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-    background-color: var(--dark);
-    border: 12px solid var(--dark);
-    border-radius: 3rem;
+.footer,
+.container-fluid.footer {
+    background-color: var(--dark) !important;
+    color: var(--primary) !important;
 }
 
-@media (max-width: 768px) {
-    #header-carousel .carousel-item {
-        position: relative;
-        min-height: 450px;
-    }
-    
-    #header-carousel .carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+/* Titres du footer */
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {
+    color: var(--primary) !important;
 }
 
-.page-header {
-    padding-top: 12rem;
-    padding-bottom: 6rem;
-    background: linear-gradient(rgba(0, 29, 35, .8), rgba(0, 29, 35, .8)), url(../img/carousel-1.jpg) center center no-repeat;
-    background-size: cover;
-}
-
-.page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: #999999;
-}
-
-/* =========== STYLE POUR LA SECTION ÉVÉNEMENT EN HAUT DE PAGE =========== */
-
-#section-event {
-    /* --- LIGNE MODIFIÉE --- */
-    /* On passe l'opacité de 0.85 à 0.70 (ou une valeur qui vous convient) */
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1)), url(../img/event.png);
-
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-/* On s'assure que le titre reste bien visible */
-#section-event .d-inline-block.rounded-pill {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.upcoming-event-poster {
-    background: #f5f2ed;
-}
-
-.upcoming-event-poster img {
-    display: block;
-}
-
-
-/*** Causes ***/
-.causes-item .progress {
-    height: 5px;
-    border-radius: 0;
-    overflow: visible;
-}
-
-.causes-item .progress .progress-bar {
-    position: relative;
-    overflow: visible;
-    width: 0px;
-    border-radius: 0;
-    transition: 5s;
-}
-
-.causes-item .progress .progress-bar span {
-    position: absolute;
-    top: -7px;
-    right: 0;
-    width: 40px;
-    height: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    background: var(--primary);
-    color: #FFFFFF;
-}
-
-.causes-item .causes-overlay {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, .5);
-    overflow: hidden;
-    opacity: 0;
-    transition: .5s;
-}
-
-.causes-item:hover .causes-overlay {
-    height: 100%;
-    opacity: 1;
-}
-
-
-/*** Service ***/
-.service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .06);
-}
-
-
-/*** Donate ***/
-.donate {
-    background: rgba(0, 29, 35, .8);
-}
-
-.btn-group .btn-light:hover,
-.btn-group input[type="radio"]:checked+label {
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
-
-/*** Team ***/
-.team-item img {
-    position: relative;
-    top: 0;
-    transition: .5s;
-}
-
-.team-item:hover img {
-    top: -30px;
-}
-
-.team-item .team-text {
-    position: relative;
-    height: 100px;
-    transition: .5s;
-}
-
-.team-item:hover .team-text {
-    margin-top: -60px;
-    height: 160px;
-}
-
-.team-item .team-text .team-social {
-    opacity: 0;
-    transition: .5s;
-}
-
-.team-item:hover .team-text .team-social {
-    opacity: 1;
-}
-
-.team-item .team-social .btn {
-    display: inline-flex;
-    color: var(--primary);
-    background: #FFFFFF;
-    border-radius: 40px;
-}
-
-.team-item .team-social .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-
-/*** Testimonial ***/
-.testimonial-carousel::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.testimonial-carousel::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@media (min-width: 768px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
-
-@media (min-width: 992px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
-}
-
-.testimonial-carousel .owl-item .testimonial-text {
-    background: var(--light);
-    transform: scale(.8);
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text {
-    background: var(--primary);
-    transform: scale(1);
-}
-
-.testimonial-carousel .owl-item .testimonial-text *,
-.testimonial-carousel .owl-item .testimonial-item img {
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text * {
+/* Textes et liens dans le footer */
+.footer p, 
+.footer span, 
+.footer div, 
+.footer a,
+.footer .btn.btn-link {
     color: var(--light) !important;
 }
 
-.testimonial-carousel .owl-item.center .testimonial-item img {
-    background: var(--primary) !important;
-} 
-
-.testimonial-carousel .owl-nav {
-    position: absolute;
-    width: 350px;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transition: .5s;
-    z-index: 1;
-}
-
-.testimonial-carousel:hover .owl-nav {
-    width: 300px;
-    opacity: 1;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: relative;
-    color: var(--primary);
-    font-size: 45px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    color: var(--dark);
-}
-
-
-/*** Footer ***/
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: rgba(255,255,255,0.5);
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: rgba(255,255,255,0.5);
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    color: var(--light);
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.footer .btn.btn-square {
-    color: rgba(255,255,255,0.5);
-    border: 1px solid rgba(255,255,255,0.5);
-}
-
-.footer .btn.btn-square:hover {
-    color: var(--secondary);
-    border-color: var(--light);
+.footer .btn.btn-link:hover,
+.footer a:hover {
+    color: var(--secondary) !important;
 }
 
 .footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: var(--grey) !important;
 }
 
-.footer .copyright a {
-    color: var(--secondary);
-}
-
-.footer .copyright a:hover {
-    color: var(--primary);
-}
-
-
-/* =========== BOOTSTRAP OVERRIDES =========== */
-
-/* Couleur de texte principale */
-.text-primary {
-    color: var(--primary) !important; /* !important est nécessaire ici car Bootstrap utilise aussi !important pour .text-primary */
-}
-
-/* Arrière-plan principal */
-.bg-primary {
+/* 1. Bannière d'appel au don */
+.bg-primary, 
+.container-fluid.bg-primary,
+.call-to-action {
     background-color: var(--primary) !important;
 }
 
-/* Bordure principale */
-.border-primary {
-    border-color: var(--primary) !important;
-}
-/* Cas spécifique pour les bordures épaisses utilisées dans le template */
-.border-5.border-primary {
-    border-color: var(--primary) !important;
-}
-.border-top.border-5.border-primary { /* Pour .causes-item */
-    border-top-color: var(--primary) !important;
-}
-.border-bottom.border-5.border-primary { /* Pour la section "Qui sommes-nous" */
-     border-bottom-color: var(--primary) !important;
+/* Badge au-dessus des titres ("Nos engagements", etc.) */
+.badge-mavana,
+.section-title span,
+.bg-light {
+    background-color: var(--light) !important;
+    color: var(--primary) !important;
+    font-weight: 600;
 }
 
-
-/* Boutons principaux */
-.btn-primary {
-    color: #FFFFFF; /* Texte blanc pour contraster avec le fond vert */
-    background-color: var(--primary);
-    border-color: var(--primary);
+/* 3. Bannières de haut de page */
+.page-header {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+    background: linear-gradient(rgba(18, 41, 30, 0.65), rgba(18, 41, 30, 0.65)), url(../img/event.png) center center no-repeat !important;
+    background-size: cover !important;
 }
 
-.btn-primary:hover {
-    color: #FFFFFF;
-    background-color: #2e603a; /* Un vert un peu plus foncé au survol */
-    border-color: #2a5734;
+.page-header h1,
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    color: #FFFFFF !important;
 }
 
-.btn-check:focus+.btn-primary, .btn-primary:focus,
-.btn-check:checked+.btn-primary,
-.btn-check:active+.btn-primary,
-.btn-primary:active,
-.btn-primary.active,
-.show>.btn-primary.dropdown-toggle {
-    color: #FFFFFF;
-    background-color: #2a5734; /* Vert encore plus foncé pour l'état actif/focus */
-    border-color: #254b2f;
-    box-shadow: 0 0 0 .25rem rgba(61, 126, 77, 0.5); /* Ombre avec une teinte verte */
+/* 4. Navbar collante au défilement (Sticky Navigation) */
+.sticky-top {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1020 !important;
+    background-color: var(--dark) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Boutons outline principaux */
-.btn-outline-primary {
-    color: var(--primary);
-    border-color: var(--primary);
+.service-icon i,
+.icon-box i,
+.causes-icon i {
+    font-size: 32px !important;
+    color: var(--primary) !important;
+    line-height: 1 !important;
+    margin: 0 !important;
 }
 
-.btn-outline-primary:hover {
-    color: #FFFFFF;
-    background-color: var(--primary);
-    border-color: var(--primary);
+/* 6. Logo Instagram plus grand dans le footer */
+.footer .btn-square,
+.footer a.btn-social,
+.footer .fab.fa-instagram {
+    font-size: 28px !important;
+    width: 48px !important;
+    height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--light) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-.btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus,
-.btn-check:checked+.btn-outline-primary,
-.btn-check:active+.btn-outline-primary,
-.btn-outline-primary:active,
-.btn-outline-primary.active,
-.btn-outline-primary.dropdown-toggle.show {
-    color: #FFFFFF;
-    background-color: var(--primary);
-    border-color: var(--primary);
-    box-shadow: 0 0 0 .25rem rgba(61, 126, 77, 0.5); /* Ombre avec une teinte verte */
+.footer .btn-square:hover,
+.footer a.btn-social:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
 }
 
-/* ============================================== */
-/* === Style pour le bouton Afficher/Masquer MP === */
-/* ============================================== */
-
-/* Style du bouton par défaut (avant survol) */
-#toggle-password-btn {
-    color: #6c757d;  /* Couleur de texte grise standard de Bootstrap pour 'secondary' */
-    border-color: #6c757d;
-    opacity: 0.75; /* On le rend légèrement moins opaque qu'un bouton standard */
-    transition: all 0.2s ease-in-out; /* Transition douce pour le survol */
+/* CORRECTION CENTRAGE PARFAIT DES ICÔNES DANS LES CERCLES */
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
 }
 
-/* Style du bouton au survol ou au focus */
-#toggle-password-btn:hover,
-#toggle-password-btn:focus {
-    color: #fff; /* Texte blanc */
-    background-color: #5c636a; /* Fond gris foncé */
-    border-color: #565e64;
-    opacity: 1; /* Pleinement opaque au survol */
-    box-shadow: none; /* On retire l'ombre de focus par défaut si elle ne vous plaît pas */
+.btn-square i,
+.btn-sm-square i,
+.btn-lg-square i {
+    margin: 0 !important;
+    line-height: 1 !important;
+    display: block !important;
 }
 
-/* On s'assure que l'icône à l'intérieur hérite bien de la couleur */
-#toggle-password-btn i {
-    color: inherit;
+/* --- FORCER LES COULEURS --- */
+
+/* --- membre info (rose) --- */
+h3.text-info,
+span.text-info,
+.text-info {
+    color: var(--info) !important;
 }
 
-
-
-/* Liens de navigation actifs (déjà correctement géré par votre style.css existant avec var(--primary)) */
-/* .navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-} */
-
-/* Éléments de dropdown actifs */
-.dropdown-menu .dropdown-item.active, 
-.dropdown-menu .dropdown-item:active {
-    color: #fff;
-    background-color: var(--primary);
+.border-info {
+    border-color: var(--info) !important;
 }
 
-/* Boutons radio dans le formulaire de don */
-.btn-group input[type="radio"]:checked+label {
-    color: var(--primary); /* Template utilise déjà var(--primary) ici, mais on s'assure */
-    border-color: var(--primary);
+/* --- BOUTON INSTA ACTU --- */
+.btn-blue,
+a.btn-blue,
+button.btn-blue {
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: var(--white) !important;
+    transition: all 0.3s ease;
 }
 
-/* Spinner */
-.spinner-grow.text-primary {
-    /* Sera pris en charge par la règle .text-primary ci-dessus */
+/* Bouton Inversé (Pour les fonds sombres/verts) */
+.btn-mavana-inverse {
+    background-color: var(--white) !important;
+    border-color: var(--white) !important;
+    color: var(--secondary) !important;
+    border-radius: 30px;
+    padding: 10px 24px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-/* Liens dans le footer (s'ils utilisaient .text-primary) */
-.footer .btn.btn-link {
-    /* Le template les style déjà, mais si vous voulez forcer la couleur primaire : */
-    /* color: var(--primary); */
+.btn-mavana-inverse:hover {
+    background-color: var(--light) !important;
+    border-color: var(--light) !important;
+    color: var(--primary) !important;
 }
-/* Le template style .footer .btn.btn-link::before avec rgba(255,255,255,0.5) */
-/* Si vous voulez que cette icone soit verte aussi : */
-.footer .btn.btn-link::before {
-    /* color: var(--primary); */ /* Décommentez si besoin */
-}
-
-
-/* Spécifique au template pour les titres des "causes" */
-.causes-item .d-inline-block.bg-primary {
-    background-color: var(--primary) !important; /* Assurez-vous que cela prend le dessus */
-}
-
-/* Spécifique au template pour les pills "Qui sommes-nous?" etc. */
-.d-inline-block.rounded-pill.bg-secondary.text-primary {
-    /* La couleur du texte est gérée par .text-primary ci-dessus */
-    /* background-color: var(--secondary); /* S'assurer que le fond reste --secondary */
-}
-
-/* Styles spécifiques du template à vérifier et ajuster si la couleur primaire est utilisée */
-/* Exemple : .team-item .team-social .btn, .testimonial-carousel etc. */
-/* La plupart des éléments de votre template utilisent déjà var(--primary) pour les couleurs personnalisées. */
-/* Les surcharges ci-dessus concernent surtout les classes Bootstrap standard. */
-
-/* =========== FIN DES BOOTSTRAP OVERRIDES =========== */
